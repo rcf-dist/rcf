@@ -11,6 +11,7 @@ copyright = "Everything is mine"
     languageName = "English"
     weight = 1
     title_404 = "Page not found :("
+    image_404 = "img/404-bg.jpeg"
     [[languages.en.params.addtional_menus]]
         title =  "User Guide"
         href =  "/en/userguide/"
@@ -38,6 +39,7 @@ copyright = "Everything is mine"
     languageName = "Italiano"
     weight = 2
     title_404 = "pagina non trovata :("
+    image_404 = "img/404-bg.jpeg"
     [languages.it.params]
       [[languages.it.params.addtional_menus]]
         title =  "Guida all'Uso"
@@ -75,7 +77,6 @@ home = ["HTML", "RSS"]
   bookmarks = true
   enableBlogPost = false
 
-  image_404 = "img/404-bg.jpg"
   omit_categories = false
 
 [params.social]
