@@ -31,3 +31,11 @@ showtoc: false
 | **_Diana Di Luccio_**     | diana.diluccio@uniparthenope.it      |
 | **_Livia Marcellino_**    | livia.marcellino@uniparthenope.it    |
 | **_Antonino Staiano_**    | antonino.staiano@uniparthenope.it    |
+
+# Dottorandi
+
+|                           |                                      |
+|---------------------------|--------------------------------------|
+| **_Emanuel Di Nardo_** | emanuel.dinardo@uniparthenope.it |
+
+# Esterni
