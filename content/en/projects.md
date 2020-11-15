@@ -1,9 +1,9 @@
 ---
-type: "post"
+type: "page"
 title: "Projects"
 author: "RCF"
 subtitle:    "H2020, PRIN, PON & local research lines."
-description: "Some of the RCF supportd projects."
+description: "Some of the RCF supported projects."
 date:        2020-11-13
 image:       ""
 tags:        []
