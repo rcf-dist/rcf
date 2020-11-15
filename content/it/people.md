@@ -20,7 +20,7 @@ categories:  []
 | **_Angelo Ciaramella_**  | Direttore del CI&SS Lab.       | angelo.ciaramella@uniparthenope.it  |
 | **_Alessio Ferone_**     | Co-direttore del CVPR Lab      | alessio.ferone@uniparthenope.it     |
 | **_Giulio Giunta_**      | Direttore di HPSCSmart Lab.    | giulio.giunta@uniparthenope.it      |
-| **_Antonino Staianao_**  | Co-direttore del CI&SSLab.     | antonino.staiano@uniparthenope.it   |
+| **_Antonio Maratea_**    | Co-direttore del CI&SSLab.     | antonio.maratea@uniparthenope.it    |
 
 # Associati
 
@@ -28,12 +28,5 @@ categories:  []
 |---------------------------|--------------------------------------|
 | **_Aniello Castiglione_** | aniello.castiglione@uniparthenope.it |
 | **_Diana Di Luccio_**     | diana.diluccio@uniparthenope.it      |
-| **_Antonio Maratea_**     | antonio.maratea@uniparthenope.it     |
 | **_Livia Marcellino_**    | livia.marcellino@uniparthenope.it    |
-
-# Assistenti di ricerca
-
-|                             |                                      |
-|-----------------------------|--------------------------------------|
-| **_Ciro Giuseppe De Vita_** | cirogiuseppe.devita@uniparthenope.it |
-| **_Gennaro Mellone_**       | gennaro.mellone@uniparthenope.it     |
+| **_Antonino Staiano_**    | antonino.staiano@uniparthenope.it    |
