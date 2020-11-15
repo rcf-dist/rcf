@@ -1,4 +1,5 @@
 ---
+type: "page"
 title: "Progetti"
 author: "RCF"
 subtitle:    "H2020, PRIN, PON & linee di ricerca locali."
