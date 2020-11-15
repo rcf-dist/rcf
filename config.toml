@@ -1,0 +1,102 @@
+baseURL = "https://rcf.uniparthenope.it/"
+languageCode = "it-it"
+title = "Research Computing Facilities"
+theme = "hugo-theme-cleanwhite"
+
+DefaultContentLanguage = "it"
+copyright = "Everything is mine"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title_404 = "Page not found :("
+    [[languages.en.params.addtional_menus]]
+        title =  "User Guide"
+        href =  "/en/userguide/"
+    [[languages.en.params.addtional_menus]]
+        title =  "Access"
+        href =  "/en/access/"
+    [languages.en.params]
+      [[languages.en.params.addtional_menus]]
+        title =  "Resources"
+        href =  "/en/resources/"
+      [[languages.en.params.addtional_menus]]
+        title =  "Policy"
+        href =  "/en/policy/"
+      [[languages.en.params.addtional_menus]]
+        title =  "Projects"
+        href =  "/en/projects/"
+      [[languages.en.params.addtional_menus]]
+        title =  "People"
+        href =  "/en/people/"
+      [[languages.en.params.addtional_menus]]
+        title =  "About"
+        href =  "/en/about/"
+      
+  [languages.it]
+    languageName = "Italiano"
+    weight = 2
+    title_404 = "pagina non trovata :("
+    [languages.it.params]
+      [[languages.it.params.addtional_menus]]
+        title =  "Guida all'Uso"
+        href =  "/it/userguide/"
+      [[languages.it.params.addtional_menus]]
+        title =  "Accesso"
+        href =  "/it/access/"
+      [[languages.it.params.addtional_menus]]
+        title =  "Risorse"
+        href =  "/it/resources/"
+      [[languages.it.params.addtional_menus]]
+        title =  "Regolamento"
+        href =  "/it/policy/"
+      [[languages.it.params.addtional_menus]]
+        title =  "Progetti"
+        href =  "/it/projects/"
+      [[languages.it.params.addtional_menus]]
+        title =  "Persone"
+        href =  "/it/people/"
+      [[languages.it.params.addtional_menus]]
+        title =  "Informazioni"
+        href =  "/it/about/"
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[params]
+  header_image = "img/jeans.jpeg"
+  SEOTitle = "Research Computing Facilities"
+  description = ""
+  keyword = "raffaele, montella, high performance computing, hpc, uniparthenope, università degli studi di napoli parthenope, parthenope, dipartimento di scienze e tecnologie"
+  slogan = "HPC matters"
+
+  friends = false
+  bookmarks = true
+  enableBlogPost = false
+
+  image_404 = "img/404-bg.jpg"
+  omit_categories = false
+
+[params.social]
+  rss            = true 
+  email          = "rcf@uniparthenope.it"
+  github         = "https://github.com/uniparthenope"
+
+ [[params.friend_link]]
+  title = "CMMMA"
+  href =  "https://app.meteo.uniparthenope.it"
+
+  [[params.bookmark_link]]
+  title =  "purpleJeans"
+  href =  "http://purplejeans.uniparthenope.it/ganglia"
+  [[params.bookmark_link]]
+  title = "blackJeans"
+  href =  "http://blackjeans.uniparthenope.it/ganglia"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    startLevel = 1
+  [markup.highlight]
+    style = "dracula"
