@@ -43,3 +43,5 @@ showtoc: false
 |                        | Affiliazione          | Sponsor          |
 |------------------------|-----------------------|------------------|
 | **_Pasquale De Luca_** | Università di Salerno | Livia Marcellino |
+| **_Dante D. Sànchez-Gallegos_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
+| **_Armando Barron_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
