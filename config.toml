@@ -69,7 +69,7 @@ home = ["HTML", "RSS"]
   SEOTitle = "Research Computing Facilities"
   description = ""
   keyword = "raffaele, montella, high performance computing, hpc, uniparthenope, università degli studi di napoli parthenope, parthenope, dipartimento di scienze e tecnologie"
-  slogan = "HPC matters"
+  slogan = "Struttura di gestione per le risorse HPC, GPU, e Cloud Computing trasversale ai laboratori CI&SS, CVPR, HPSCSmart e Neptun-IA del Dipartimento di Scienze e Tecnologie dell’Università degli Studi di Napoli “Parthenope”."
 
   friends = false
   bookmarks = true
@@ -91,7 +91,7 @@ home = ["HTML", "RSS"]
   title =  "Dipartimento di Scienze e Tecnologie"
   href =   "http://dist.uniparthenope.it"
   [[params.bookmark_link]]
-  title =  "Università degli Studi di Napoli 'Parthenope'"
+  title =  "Università degli Studi di Napoli “Parthenope”"
   href =   "http://www.uniparthenope.it"
   [[params.bookmark_link]]
   title =  "Centro per il Monitoraggio e la Modellistica Marina e Atmosferica"
