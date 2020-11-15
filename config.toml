@@ -81,18 +81,33 @@ home = ["HTML", "RSS"]
 [params.social]
   rss            = true 
   email          = "rcf@uniparthenope.it"
-  github         = "https://github.com/uniparthenope"
+  github         = "https://github.com/rcf-dist"
 
  [[params.friend_link]]
   title = "CMMMA"
   href =  "https://app.meteo.uniparthenope.it"
 
   [[params.bookmark_link]]
-  title =  "purpleJeans"
-  href =  "http://purplejeans.uniparthenope.it/ganglia"
+  title =  "Dipartimento di Scienze e Tecnologie"
+  href =   "http://dist.uniparthenope.it"
   [[params.bookmark_link]]
-  title = "blackJeans"
-  href =  "http://blackjeans.uniparthenope.it/ganglia"
+  title =  "Università degli Studi di Napoli 'Parthenope'"
+  href =   "http://www.uniparthenope.it"
+  [[params.bookmark_link]]
+  title =  "Centro per il Monitoraggio e la Modellistica Marina e Atmosferica"
+  href =   "http://meteo.uniparthenope.it"
+  [[params.bookmark_link]]
+  title =  "HPSC SmartLab"
+  href =  "http://hpsclab.uniparthenope.it"
+  [[params.bookmark_link]]
+  title = "CVPRLab"
+  href =  "http://cvprlab.uniparthenope.it"
+  [[params.bookmark_link]]
+  title =  "CI&SSLab"
+  href =  "http://cisslab.uniparthenope.it"
+  [[params.bookmark_link]]
+  title = "Neptun-IA"
+  href =  "http://neptunia.uniparthenope.it"
 
 [markup]
   [markup.tableOfContents]
