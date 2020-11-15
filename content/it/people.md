@@ -7,6 +7,7 @@ date:        2020-11-15
 image:       ""
 tags:        []
 categories:  []
+showtoc: false
 ---
 
 # Direzione

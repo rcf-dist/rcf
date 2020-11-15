@@ -1,5 +1,13 @@
 ---
 title: "Guida all’uso"
+author: "RCF"
+subtitle:    "Istruzioni per l'utilizzo corretto delle risorse di calcolo RCF"
+description: "Dettagli sulle modalità d'uso delle risorse RCF e relative istruzioni operative."
+date:        2020-11-15
+image:       ""
+tags:        []
+categories:  []
+showtoc: true
 ---
 Una volta che l’utente è in grado di accedere a purpleJeans (Connessione a risorse), caricare e accedere ai suoi file sul cluster (Archiviazione e trasferimento dati) e caricare strumenti software utilizzando il sistema del modulo (Software), si è pronti per la pianificazione dell'accesso al cluster di calcolo per eseguire calcoli.
 

@@ -1,5 +1,13 @@
 ---
 title: "Risorse di calcolo"
+author: "RCF"
+subtitle:    "purpleJeans, blackJeans e le altre risorse di calcolo di RCF"
+description: "Elenco delle risorse di calcolo gestite da RCF."
+date:        2020-11-15
+image:       ""
+tags:        []
+categories:  []
+showtoc: true
 ---
 
 Le seguenti risorse di calcolo sono a disposizione degli utenti RCF:

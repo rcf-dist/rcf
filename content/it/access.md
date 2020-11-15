@@ -1,5 +1,13 @@
 ---
 title: "Connettersi alle risorse RCF"
+author: "RCF"
+subtitle:    "Linux, MacOS, Windows"
+description: "Accetto alle risorse computazionali RCF tramite Linux, MacOS e Windows attraverso ssh e server grafico."
+date:        2020-11-15
+image:       ""
+tags:        []
+categories:  []
+showtoc: true
 ---
 
 Le informazioni successive descrivono come gli utenti possono accedere alle risorse RCF. Tutti gli utenti delle risorse RCF sono responsabili della conoscenza e del rispetto della Politica dell'utente RCF. 

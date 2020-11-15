@@ -8,6 +8,7 @@ date:        2020-11-13
 image:       ""
 tags:        []
 categories:  []
+showtoc: true
 ---
 
 I seguenti progetti di ricerca sono alcuni di quelli attualmente supportati dalla RCF:

@@ -7,6 +7,7 @@ date:        2020-11-15
 image:       ""
 tags:        []
 categories:  []
+showtoc: true
 ---
 
 La Research Computing Facilities (RCF) è una struttura di gestione per le risorse computazionali di tipo High Performance Computing, GPU Computing e Cloud Computing trasversale ai laboratori Computational Intelligence and Smart Systems (CI&SS, http://cisslab.uniparthenope.it), Computer Vision and Pattern Recognition (CVPR, http://cvprlab.uniparthenope.it) e High Performance Scientific Computing-SmartLab (HPSC, http://hpsclab.uniparthenope.it), nonché nel laboratorio multidisciplinare Neptun-IA dedicato alle applicazioni dell’intelligenza artificiale al mare (http://neptunia.uniparthenope.it), del Dipartimento di Scienze e Tecnologie dell’Università degli Studi di Napoli “Parthenope”.

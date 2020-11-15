@@ -1,5 +1,13 @@
 ---
 title: "Regolamento"
+author: "RCF"
+subtitle:    "Regolamento e policy di gestione delle risorse RCF"
+description: "Dettagli sul regolamento adottato da RCP per la gestione delle risorse di calcolo e relative policy."
+date:        2020-11-15
+image:       ""
+tags:        []
+categories:  []
+showtoc: true
 ---
 
 Collaborando con RCF, è possibile avere accesso a vari sistemi di computer RCF, reti, applicazioni, dati e/o altre risorse tecnologiche. Utilizzando qualsiasi risorsa RCF, si accetta di attenersi alla politica di utilizzo riportata di seguito e di utilizzare le risorse RCF in modo responsabile ed etico. Si prega di leggere attentamente le informazioni di seguito. Le violazioni della politica di utilizzo di RCF possono comportare la rimozione dell’accesso alle risorse RCF e la segnalazione di attività sospette alle autorità competenti.
