@@ -34,8 +34,12 @@ showtoc: false
 
 # Dottorandi
 
-|                           |                                      |
-|---------------------------|--------------------------------------|
-| **_Emanuel Di Nardo_** | emanuel.dinardo@uniparthenope.it |
+|                        | |                                  |
+|------------------------|-|----------------------------------|
+| **_Emanuel Di Nardo_** | | emanuel.dinardo@uniparthenope.it |
 
 # Esterni
+
+|                        | Affiliazione          | Sponsor          |
+|------------------------|-----------------------|------------------|
+| **_Pasquale De Luca_** | Università di Salerno | Livia Marcellino |
