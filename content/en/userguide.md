@@ -1,30 +1,30 @@
 ---
 title: "User Guide"
 ---
-Una volta che l’utente è in grado di accedere a purpleJeans (Connessione a risorse), caricare e accedere ai suoi file sul cluster (Archiviazione e trasferimento dati) e caricare strumenti software utilizzando il sistema del modulo (Software), si è pronti per la pianificazione dell'accesso al cluster di calcolo per eseguire calcoli.
+Once the user is able to log into purpleJeans (Connect to Resources), upload and access their files on the cluster (Data Storage and Transfer), and upload software tools using the (Software) module system, you are ready to scheduling access to the compute cluster to perform calculations.
 
-# Introduzione
-Il cluster di calcolo purpleJeans è una risorsa condivisa utilizzata da tutta la comunità RCF. La condivisione delle risorse computazionali crea sfide uniche:
+# Introduction
+The purpleJeans compute cluster is a shared resource used by the entire RCF community. Sharing computational resources creates unique challenges:
 
-* I job devono essere gestiti (job scheduler) in modo equo per tutti gli utenti.
-* Il consumo di risorse deve essere registrato.
-* L'accesso alle risorse deve essere controllato.
+* Jobs must be managed (job scheduler) equally for all users.
+* Resource consumption must be logged.
+* Access to resources must be controlled.
 
-Il cluster di calcolo purpleJeans utilizza uno scheduler per gestire le richieste di accesso alle risorse di calcolo. Queste richieste sono chiamate job. In particolare, viene utilizzato il gestore delle risorse di Slurm per pianificare i lavori, nonché l'accesso interattivo ai nodi di calcolo.
+The purpleJeans compute cluster uses a scheduler to handle requests for access to compute resources. These requests are called jobs. In particular, Slurm's resource manager is used to schedule jobs, as well as interactive access to compute nodes.
 
-Slurm è un sistema open source, tollerante ai guasti e altamente scalabile per la gestione dei cluster e la pianificazione (sheduling) dei job per cluster Linux grandi e piccoli. Slurm non richiede modifiche del kernel per il suo funzionamento ed è relativamente autonomo. Come gestore del carico di lavoro del cluster, Slurm ha tre funzioni chiave. Innanzitutto, assegna agli utenti l'accesso esclusivo e/o non esclusivo alle risorse (nodi di calcolo) per un certo periodo di tempo, in modo che possano eseguire job. In secondo luogo, fornisce un framework per l'avvio, l'esecuzione e il monitoraggio dei job (normalmente job da eseguire in parallelo) sull'insieme di nodi allocati. Infine, arbitra la contesa per le risorse gestendo una coda (partizioni) di job in sospeso. I plug-in opzionali possono essere utilizzati per la contabilità dell’uso delle risorse, la prenotazione avanzata, la pianificazione di gruppi (condivisione del tempo per job paralleli), la programmazione di backfill, la selezione di risorse ottimizzata per la topologia, i limiti di risorse per utente o account e sofisticati algoritmi di prioritizzazione dei lavori a più fattori.
+Slurm is an open source, fault tolerant, and highly scalable system for cluster management and job sheduling for large and small Linux clusters. Slurm does not require kernel modifications for its operation and is relatively self-contained. As a cluster workload manager, Slurm has three key functions. First, it gives users exclusive and / or non-exclusive access to resources (compute nodes) for a certain period of time, so that they can run jobs. Second, it provides a framework for starting, running, and monitoring jobs (usually jobs to run in parallel) on the set of allocated nodes. Finally, it arbitrates contention for resources by managing a queue (partitions) of pending jobs. Optional plug-ins can be used for resource usage accounting, advanced booking, group scheduling (sharing time for parallel jobs), backfill scheduling, topology-optimized resource selection, boundaries of resources per user or account and sophisticated multi-factor job prioritization algorithms.
 
-Qui di seguito, sono fornite le informazioni essenziali che bisogna sapere per iniziare a lavorare su purpleJeans. Per informazioni più dettagliate sull'esecuzione di job di calcolo specializzati, vedere Esecuzione di lavori su purpleJeans (link).
+Below is the essential information you need to know to get started on purpleJeans. For more detailed information on running specialized compute jobs, see Running Jobs on purpleJeans (link).
 
-# Tipologia di nodi di calcolo
-Il cluster di calcolo purpleJeans è costituito da nodi di calcolo con diverse architetture e configurazioni. Una partizione è una raccolta di nodi di calcolo che hanno tutti la stessa o simile architettura e configurazione. Attualmente, purpleJeans ha le seguenti partizioni:
+# Computing nodes types
+The purpleJeans compute cluster consists of compute nodes with different architectures and configurations. A partition is a collection of compute nodes that all have the same or similar architecture and configuration. Currently, purpleJeans has the following partitions:
 
-| Risorsa           | Partizioni | Nodi | CPU/Nodo                                             | Core/Nodo | Memoria/Nodo   | Note                                                                       |
+| Resources           | Partitions | Nodes | CPU/Node                                             | Core/Node | Memory/Node   | Notes                                                                       |
 |-------------------|------------|------|------------------------------------------------------|-----------|----------------|-------------------------------------------------------------------------------------------------------------------------|
 | purpleJeans (2019)| xhicpu     |    4 | 2 CPU Intel(R) Xeon(R) Xeon 16-Core 5218 2,3Ghz 22MB |        32 |         192 GB | Cluster dedicato alla ricerca nell’ambito del machine learning e big data. Mellanox CX4 VPI SinglePort FDR IB 56Gb/s x16. |
 |                   | xgpu       |    4 | 2 CPU Intel(R) Xeon(R) Xeon 16-Core 5218 2,3Ghz 22MB |        32 |         192 GB | 4 GPU  (NVLINK) NVIDIA Tesla V100 32GB SXM2. Infiniband Mellanox CX4 VPI SinglePort FDR IB 56Gb/s x16. |
 
-E’ possibile avere un riepilogo delle partizioni su purpleJeans usando il comando sinfo:
+It is possible to have a summary of the partitions on purpleJeans using the sinfo command:
 
 ```sh
 $ sinfo shared
@@ -35,20 +35,20 @@ xgpu         up    6:00:00      1  alloc gnode03
 xgpu         up    6:00:00      2   idle gnode[01,04]
 ```
 
-Nel riepilogo ottenuto con sinfo shared, la colonna “NODES” fornisce il numero totale di nodi in ciascuna partizione. Questo riepilogo elenca anche le partizioni riservate all'uso da parte di determinati laboratori.
+In the summary obtained with sinfo shared, the “NODES” column gives the total number of nodes in each partition. This summary also lists the partitions reserved for use by certain laboratories.
 
-# Job interattivi
-Dopo aver sottomesso un job interattivo su purpleJeans,  Slurm ti collegherà a un nodo di calcolo e caricherà un ambiente di shell interattivo da utilizzare su quel nodo di calcolo. Questa sessione interattiva persisterà fino alla disconnessione dal nodo di calcolo o fino al raggiungimento del tempo massimo richiesto. Il tempo richiesto predefinito è di 2 ore.
+# Interactive jobs
+After submitting an interactive job on purpleJeans, Slurm will connect you to a compute node and load an interactive shell environment for use on that compute node. This interactive session will persist until disconnected from the compute node or until the maximum time required is reached. The default required time is 2 hours.
 
 ## srun
-Un’alternativa a sinteractive è il comando srun:
+An alternative to sinteractive is the srun command:
 
 ```sh
 $ srun --pty bash
 srun: job 2808 queued and waiting for resources
 ```
 
-A differenza di sinteractive, questo comando non imposta il forward X11, il che significa che non è possibile visualizzare la grafica usando srun. Entrambi i comandi srun e sinteractive hanno le stesse opzioni. Durante l’esecuzione di un task interattivo si ha accesso alla propria home e di conseguenza a tutte le librerie installate. Un esempio di utilizzo di srun con varie opzioni è il seguente:
+Unlike sinteractive, this command does not set X11 forward, which means that it is not possible to display graphics using srun. Both the srun and sinteractive commands have the same options. During the execution of an interactive task, you have access to your home and consequently to all installed libraries. An example of using srun with various options is as follows:
 
 ```sh
 $ srun --ntasks=1 \
@@ -70,7 +70,7 @@ $ srun --ntasks=1 \
 | --pty              | Esegue il task in modalità terminale                        |
 | bash               |Eseguibile da lanciare, in questo caso il comando bash       |
 
-In questo esempio si utilizzerà il solo nodo wnode01 richiedendo un numero limitato di risorse (44GB di memoria e 8 CPU per 1 task), questo permette l’esecuzione parallela di più job (senza distinzione tra srun e sbatch)
+In this example, only the wnode01 node will be used, requiring a limited number of resources (44GB of memory and 8 CPUs for 1 task), this allows the parallel execution of multiple jobs (without distinction between srun and sbatch)
 
 ## Job di tipo Batch
 Il comando sbatch è il comando più comunemente usato dagli utenti RCF per richiedere risorse di calcolo sul cluster purpleJeans. Anziché specificare tutte le opzioni nella riga di comando, gli utenti in genere scrivono uno “script sbatch” che contiene tutti i comandi e i parametri necessari per eseguire il programma sul cluster.
