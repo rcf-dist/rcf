@@ -97,8 +97,14 @@ Ecco un esempio di uno script sbatch:
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=16
 #SBATCH --mem-per-cpu=2000
- 
-module load openmpi
+
+# Set stack size (to avoid warning message)
+ulimit -s 10240
+
+# Load OpenMPI module
+module load ompi-4.1.0-gcc-8.3.1
+
+# Run
 mpirun ./hello-mpi
 ```
 
@@ -124,6 +130,10 @@ $ sbatch ./example.sbatch
 ```
 
 Molte altre opzioni sono disponibili per l'invio di lavori utilizzando il comando sbatch. Per esigenze computazionali più specializzate, consultare Esecuzione di job su purpleJeans (link). Inoltre, per un elenco completo delle opzioni disponibili, consultare la documentazione ufficiale SBATCH (link: https://slurm.schedmd.com/sbatch.html ).
+
+**Nota:**
+Impostare il size dello stack è buona norma per evitare messaggi di warning in runtime.
+```ulimit -s 10240```
 
 # Storage temporaneo
 Molte applicazioni generano file temporanei o intermedi scritti in /tmp. (Queste applicazioni possono scrivere file su /tmp anche senza che tu sappia che ciò sta accadendo.) Questa cartella si trova in genere su un'unità locale o sul disco RAM virtualizzato nella memoria di sistema.
@@ -221,7 +231,10 @@ I job che coinvolgono un numero molto elevato di calcoli indipendenti dovrebbero
 #SBATCH --nodes=1
 #SBATCH --ntasks=3
 #SBATCH --mem-per-cpu=2000
- 
+
+# Set stack size (to avoid warning message)
+ulimit -s 10240
+
 srun -n1 --exclusive ./program1.sh &
 srun -n1 --exclusive ./program2.sh &
 srun -n1 --exclusive ./program3.sh &
@@ -272,7 +285,10 @@ Ecco un esempio di script sbatch che alloca le risorse della GPU e carica i comp
 #SBATCH --partition=xgpu
 #SBATCH --ntasks=1       
 #SBATCH --gres=gpu:tesla:1     
- 
+
+# Set stack size (to avoid warning message)
+ulimit -s 10240
+
 module load cuda/10.1
  
 # Aggiungere i comandi necessari ad eseguire l'elaborazione GPU
@@ -386,8 +402,22 @@ Comandi base module:
 Elenco completo dei moduli software:
 
 ```
-gcc-8.3.1            ompi-4.0.1-gcc-4.8.5 ompi-4.0.1-gcc-8.3.1
-intel_MKL-2019u5
-anaconda/3               cuda/10.1                pgi/19.9(default)        pgi-llvm                 PrgEnv-pgi/19.9(default)
-cuda/10.0                openmpi/3.1.3/2019       pgi/2019                 pgi-nollvm               vapor/3.2.0
+anaconda/3                                     netcdf/4.8.1-gcc-4.8.5
+cmake/3.19.2                                   netcdf/4.8.1-gcc-8.3.1
+cmake/3.21.4                                   null
+cuda/10.0                                      nvhpc/20.11
+cuda/10.1                                      nvhpc-byo-compiler/20.11
+cuda/11.0                                      nvhpc-nompi/20.11
+cuda/11.2                                      ompi-4.0.1-gcc-4.8.5
+cuda/11.3                                      ompi-4.0.1-gcc-8.3.1
+cuda/11.4.2                                    ompi-4.1.0-gcc-8.3.1
+cuda/11.5                                      opengrads/2.2.1
+dot                                            openmpi/3.1.3/2019
+gcc-8.3.1                                      paraview/5.8.1
+intel_MKL-2019u5                               tau/tau-2.30.2-ompi-4.0.1-cuda-11.2-gcc-4.8.5
+jasper/2.0.14-gcc-8.3.1                        tau/tau-2.30.2-ompi-4.1.0-cuda-11.2-gcc-8.3.1
+module-git                                     use.own
+module-info                                    vapor/3.2.0
+modules                                        vapor/3.3.0
+mvapich2-2.3.5-gcc-8.3.1 
 ```
