@@ -1,44 +1,43 @@
 ---
 title: "Connect RCF resources"
 ---
+The following information describes how users can access RCF resources. All users of RCF resources are responsible for knowing and complying with the RCF User Policy.
+#Account credentials
+To use the RCF provided resources you need to obtain an RCF user account. If you do not already have an RCF account, please refer to the Getting Started page for more information on obtaining an RCF account.
 
-Le informazioni successive descrivono come gli utenti possono accedere alle risorse RCF. Tutti gli utenti delle risorse RCF sono responsabili della conoscenza e del rispetto della Politica dell'utente RCF. 
-Credenziali Account
-Per utilizzare le risorse fornite RCF è necessario ottenere un account utente RCF. Se non si dispone già di un account RCF, consultare la pagina Guida introduttiva per ulteriori informazioni su come ottenere un account RCF.
+The RCF account uses your name, surname or registration number for the username and password usually used for the IT services of the University of Naples "Parthenope".
 
-L’account RCF utilizza il tuo nome.cognome o numero_di_matricola per il nome utente e la password usata abitualmente per i servizi informatici dell’Università degli Studi di Napoli “Parthenope”.
+**Important**: RCF does not store your password and we are unable to reset your password. If you need assistance with the password, consult the University web page.
 
-Importante: RCF non memorizza la password e non siamo in grado di reimpostare la password. Se hai bisogno di assistenza per la password, consulta la pagina web di Ateneo.
+# Connect via SSH
+Secure Shell (SSH) is a protocol that provides secure command line access to remote resources such as purpleJeans. Using SSH, you can remotely log into your purpleJeans account and interact with the purpleJeans high-performance compute cluster.
 
-# Connettersi tramite ssh
-Secure Shell (SSH) è un protocollo che fornisce un accesso sicuro dalla riga di comando a risorse remote come purpleJeans. Utilizzando SSH, è possibile accedere in remoto al proprio account purpleJeans e interagire con il cluster di calcolo ad alte prestazioni purpleJeans.
+## Access via Macintosh and Linux
+Most Unix-like Operating Systems (Mac OS X, Linux, etc.) provide an ssh utility by default which can be accessed by typing the ssh command in a terminal window.
 
-## Accesso tramite Macintosh e Linux
-La maggior parte dei Sistemi Operativi simili a Unix (Mac OS X, Linux, ecc.) forniscono un'utilità ssh per impostazione predefinita a cui è possibile accedere digitando il comando ssh in una finestra del terminale.
-
-Per accedere a purpleJeans da un computer Linux o Mac, aprire un terminale e dalla riga di comando immettere:
+To access purpleJeans from a Linux or Mac computer, open a terminal and from the command line enter:
 
 ```sh
-$ ssh <nome.cognome>@purplejeans.uniparthenope.it
+$ ssh <name.surname>@purplejeans.uniparthenope.it
 ```
 
-Oppure
+Or
 
 ```sh
 $ ssh <matricola>@purplejeans.uniparthenope.it
 ```
 
-Per abilitare l'inoltro X11 quando ci si collega a purpleJeans con ssh, è necessario includere il flag -Y.
+To enable X11 forwarding when connecting to purpleJeans with ssh, you need to include the -Y flag.
 
-Importante: sui Mac deve essere installato il software XQuarz.
+**Important**: Macs must have the XQuarz software installed.
 
-# Connettersi usando Windows ed Ssh
-Gli utenti di Windows che eseguono la versione di aprile 2018 di Windows 10 avranno abilitato ssh da Powershell per impostazione predefinita. Tutti gli altri utenti Windows dovranno prima scaricare un client ssh per interagire con la riga di comando remota di Unix. Consigliamo MobaXterm, client, sebbene siano disponibili altre opzioni. Una volta installato il client MobaXterm sul tuo computer locale, apri il client MobaXterm (link: https://mobaxterm.mobatek.net) e fai clic sull'icona Sessions nell'angolo in alto a sinistra del client. Quindi eseguire i seguenti passaggi numerati, illustrati nella figura seguente, per stabilire una connessione a purpleJeans:
+# Connect using Windows and SSH
+Windows users running the April 2018 release of Windows 10 will have SSH enabled from Powershell by default. All other Windows users will first need to download an ssh client to interact with the Unix remote command line. We recommend MobaXterm, client, although other options are available. Once you have installed the MobaXterm client on your local computer, open the MobaXterm client (link: https://mobaxterm.mobatek.net) and click on the Sessions icon in the upper left corner of the client. Then perform the following numbered steps, shown in the following figure, to establish a connection to purpleJeans:
 
-Fare clic sulla scheda SSH per espandere le opzioni di accesso SSH.
-Nell'input del campo Host remoto: purpleJeans.uniparthenope.it (per connettersi al cluster purpleJeans)
-Seleziona il pulsante Specifica nome utente e inserisci il tuo nome utente uniparthenope.
-Procedere con il login facendo clic sul pulsante OK.
+- Click the SSH tab to expand the SSH login options.
+- In the Remote Host field input: purpleJeans.uniparthenope.it (to connect to the purpleJeans cluster)
+- Select the Specify Username button and enter your uniparthenope username.
+- Proceed with login by clicking the OK button.
 
-# Connettersi tramite XFast
-È in fase di acquisizione il software per l’accesso ubiquitario tramite client dedicato o browser web). 
+# Connect via XFast
+The software for ubiquitous access via a dedicated client or web browser is being acquired).

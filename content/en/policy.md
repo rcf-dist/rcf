@@ -2,41 +2,41 @@
 title: "Policy"
 ---
 
-Collaborando con RCF, è possibile avere accesso a vari sistemi di computer RCF, reti, applicazioni, dati e/o altre risorse tecnologiche. Utilizzando qualsiasi risorsa RCF, si accetta di attenersi alla politica di utilizzo riportata di seguito e di utilizzare le risorse RCF in modo responsabile ed etico. Si prega di leggere attentamente le informazioni di seguito. Le violazioni della politica di utilizzo di RCF possono comportare la rimozione dell’accesso alle risorse RCF e la segnalazione di attività sospette alle autorità competenti.
+By partnering with RCF, you can have access to various RCF computer systems, networks, applications, data and / or other technological resources. By using any RCF resource, you agree to abide by the usage policy below and to use the RCF resources responsibly and ethically. Please read the information below carefully. Violations of the RCF use policy may result in the removal of access to RCF resources and the reporting of suspicious activities to the competent authorities.
 
-# Policy generale
-I seguenti principi regolano l'utilizzo di tutte le risorse RCF. Ogni utente è tenuto a rispettare questi principi:
+# General Policy
+The following principles govern the use of all RCF resources. Each user is required to respect these principles:
 
-Egli è responsabile dell'uso corretto degli strumenti forniti da ciascun sistema informatico e della riservatezza di qualsiasi informazione sensibile che gli è stata affidata.
-È vietato utilizzare le risorse RCF per scopi illegali o dannosi come molestie, interruzione di comunicazioni o servizi o monitoraggio non autorizzato delle comunicazioni.
-È necessario astenersi dall'uso non etico delle risorse RCF, incluso l'uso non autorizzato di account e risorse di computer assegnati ad altri, l'uso di strutture informatiche per scopi privati ​​commerciali o politici o guadagno privato, disonestà accademica o scientifica o violazione degli accordi di licenza software.
-Deve rispettare la riservatezza e la privacy dei dati (e delle persone a cui questi fanno riferimento) cui potrebbe avere accesso in conformità con la politica RCF, gli standard etici dell'Università degli Studi di Napoli “Parthenope” e le leggi statali e regionali.
-È necessario segnalare immediatamente qualsiasi sospetta violazione della sicurezza, violazione delle politiche o attività sospette a rcf@uniparthenope.it, al proprio supervisore, PI o sponsor.
-Non tenterà di sovvertire o eludere alcuna funzionalità di sicurezza del sistema.
-Non tenterà di sovvertire o eludere alcun sistema che alloca risorse.
-È necessario essere consapevoli del fatto che tutte le attività del computer e i file su questi sistemi possono essere monitorati dagli amministratori del sistema RCFe dalle autorità appropriate.
-L’account potrebbe essere chiuso dal personale RCF per mancato rispetto di questi principi.
+He is responsible for the correct use of the tools provided by each computer system and for the confidentiality of any sensitive information that has been entrusted to him.
+You may not use RCF resources for any illegal or harmful purpose such as harassment, disruption of communications or services, or unauthorized monitoring of communications.
+You must refrain from unethical use of RCF resources, including unauthorized use of accounts and computer resources assigned to others, use of computer facilities for private commercial or political purposes or private gain, academic or scientific dishonesty or violation of software license agreements.
+It must respect the confidentiality and privacy of the data (and of the people to whom they refer) to which it may have access in accordance with the RCF policy, the ethical standards of the University of Naples "Parthenope" and state and regional laws.
+You must immediately report any suspected security breach, policy violation or suspicious activity to rcf@uniparthenope.it, your supervisor, IP or sponsor.
+He will not attempt to subvert or circumvent any security features of the system.
+It will not attempt to subvert or evade any system that allocates resources.
+Be aware that all computer activity and files on these systems can be monitored by RCF system administrators and the appropriate authorities.
+The account could be closed by RCF staff for non-compliance with these principles.
 
-RCF fornisce risorse computazionali e di archiviazione dei dati al solo scopo di supportare attività di ricerca legittime presso l'Università di Napoli “Parthenope”. Un utente deve astenersi dall'utilizzare le risorse RCF per qualsiasi attività diversa da quella descritta nel modulo di richiesta dell'account. Gli utenti RCF sono inoltre tenuti a familiarizzare con la Politica di ammissibilità e utilizzo accettabile dell'Information Technology dell’Università degli Studi di Napoli “Parthenope”.
+RCF provides computational and data storage resources for the only purpose of supporting legitimate research activities at the “Parthenope” University of Naples. A user must refrain from using RCF resources for any activity other than that described in the account request form. RCF users are also required to familiarize themselves with the *Eligibility and Acceptable Use of Information Technology Policy of the University of Naples "Parthenope"*.
 
-# Account utente e password
-Le credenziali dell’account sono assegnate ad ogni singolo utente e non devono essere condivise con nessuno, inclusi colleghi, formatori o personale di supporto informatico. Se l’utente ritiene che la password del suo account sia stata compromessa, egli è tenuto a segnalare immediatamente l'incidente al personale dell'assistenza RCF e modifica la password tramite il servizio di password dell'Università degli Studi di Napoli “Parthenope”.
+# User account and password
+The account credentials are assigned to each individual user and must not be shared with anyone, including colleagues, trainers or IT support staff. If the user believes that his account password has been compromised, he is required to immediately report the incident to the RCF assistance staff and change the password via the password service of the University of Naples "Parthenope".
 
-Esistono molti meccanismi per la condivisione dei dati e la collaborazione con i colleghi e  RCF ti assisterà con questi strumenti, se necessario. Non c'è mai motivo di condividere informazioni sull'account e/o sulla password.
+There are many mechanisms for sharing data and collaborating with colleagues and RCF will assist you with these tools if needed. There is never a reason to share account and / or password information.
 
-# Sicurezza e policy sui dati
-RCF mantiene una rete di ricerca aperta che fornisce risorse condivise di elaborazione e gestione dei dati a un gran numero di ricercatori dell'Università di Napoli “Parthenope” e ai loro collaboratori. Pertanto, RCF non può garantire la completa sicurezza dei dati memorizzati su qualsiasi sistema RCF . Sebbene la sicurezza delle informazioni sia una delle principali preoccupazioni della RCF, né RCF né l'Università di Napoli “Parthenope” possono essere ritenuti responsabili per qualsiasi violazione della sicurezza che comporti la compromissione di dati sensibili o riservati. È esclusiva responsabilità dell'utente assicurarsi che siano state prese le misure adeguate per proteggere le informazioni sensibili o riservate.
+# Data security and policy
+RCF maintains an open research network that provides shared data processing and management resources to a large number of researchers from the University of Naples “Parthenope” and their collaborators. Therefore, RCF cannot guarantee the complete security of the data stored on any RCF system. Although information security is a major concern of RCF, neither RCF nor the University of Naples “Parthenope” can be held responsible for any breach of security that involves the compromise of sensitive or confidential data. It is your sole responsibility to ensure that adequate measures have been taken to protect sensitive or confidential information.
 
-Gli amministratori di sistema RCF e il personale di supporto con privilegi di superutente sono in grado di visualizzare tutti i dati sui sistemi RCF a meno che non siano crittografati. Gli amministratori di sistema RCF esamineranno solo i dati dell'utente per fornire assistenza al proprietario o se vi sono motivi sufficienti per ritenere che esista un problema grave o una minaccia alla sicurezza che potrebbe interrompere il lavoro di altri.
+RCF system administrators and support personnel with superuser privileges are able to view all data on RCF systems unless it is encrypted. RCF system administrators will only review user data to assist the owner or if there is sufficient reason to believe that there is a serious problem or security threat that could disrupt the work of others.
 
-# Integrità dei dati e relativo recupero.
-RCF si impegna a mantenere robusti filesystem e strutture di archiviazione con i massimi livelli di prestazioni e affidabilità. Tuttavia, né RCF né l'Università di Napoli “Parthenope” né il Dipartimento di Scienze e Tecnologie saranno ritenuti responsabili per eventuali perdite di dati. RCF fornisce un sistema di backup su nastro di archiviazione in una posizione separata delle /home per l'utilizzo nel recupero dei dati in caso di danneggiamento, cancellazione o guasto della macchina.
+# Data integrity and related recovery
+RCF is committed to maintaining robust file systems and storage structures with the highest levels of performance and reliability. However, neither RCF nor the University of Naples “Parthenope” nor the Department of Science and Technology will be held responsible for any loss of data. RCF provides an archive tape backup system in a separate / home location for use in recovering data in the event of damage, deletion or failure of the machine.
 
-**Importante:**
-Non è stato eseguito il backup di tutti i file system e dei computer. A causa dello spazio limitato nel sistema di archiviazione degli archivi, solo le directory /home e /project vengono salvate su nastro di archivio. Se un progetto ha requisiti speciali di conservazione dei dati, è necessario avvisare RCF in modo che possano essere intraprese azioni appropriate per aiutare a garantire la protezione ed il recupero dei dati.
+**Important:**
+Not all file systems and computers have been backed up. Due to limited space in the archive storage system, only the / home and / project directories are saved to archive tape. If a project has special data retention requirements, RCF should be notified so that appropriate action can be taken to help ensure data protection and recovery.
 
-# Citazioni e riferimenti bibliografici
-I ricercatori impegnati nel mantenimento e nell’uso delle risorse RCF sono continuamente impegnati nella produzione di “prodotti della ricerca”. Il seguente elenco è una selezione delle pubblicazioni che possono essere citate quando le risorse RCF vengono utilizzate.
+# Citations and bibliographic references
+Researchers engaged in the maintenance and use of RCF resources are continuously engaged in the production of "research products". The following list is a selection of publications that can be cited when RCF resources are used.
 
 - Montella, Raffaele, Sokol Kosta, David Oro, Javier Vera, Carles Fernández, Carlo Palmieri, Diana Di Luccio, Giulio Giunta, Marco Lapegna, and Giuliano Laccetti. "Accelerating Linux and Android applications on low‐power devices through remote GPGPU offloading." Concurrency and Computation: Practice and Experience 29, no. 24 (2017): e4286.
 
@@ -55,13 +55,13 @@ I ricercatori impegnati nel mantenimento e nell’uso delle risorse RCF sono con
 
 - Montella, Raffaele, Giuseppe Agrillo, Daniele Mastrangelo, and Milena Menna. "A globus toolkit 4 based instrument service for environmental data acquisition and distribution." In Proceedings of the third international workshop on Use of P2P, grid and agents for the development of content networks, pp. 21-28. 2008.
 
-Citare questi prodotti della ricerca nei propri paper indicizzati contribuisce ad affermare la validità dell’impegno profuso nella gestione delle risorse RCF dando, direttamente e indirettamente, supporto alla ricerca stessa.
+Mentioning these research products in one's indexed papers helps to affirm the validity of the commitment made in the management of RCF resources by giving, directly and indirectly, support to the research itself.
 
-In generale, se si pubblica un documento o si tiene una presentazione che riconosce le risorse di calcolo RCF o altri servizi, ti preghiamo di inviarci un'e-mail con il titolo della rivista, o la conferenza in cui è stata fatta una presentazione.
+In general, if you are publishing a paper or giving a presentation that recognizes RCF computing resources or other services, please email us the title of the magazine, or the conference where a presentation was made.
 
-Queste citazioni aiutano RCF a dimostrare il ruolo delle risorse computazionali e supportano il personale nella ricerca dei laboratori CI&SS, CVPR è HPSC del Dipartimento di Scienze e Tecnologie dell’Università degli Studi di Napoli “Parthenope”. Se si desidera che il lavoro supportato da RCF sia presente sul nostro sito Web, basta inviare una mail a proposito a rcf@uniparthenope.it.
+These citations help RCF to demonstrate the role of computational resources and support the research staff of the CI&SS laboratories, CVPR is HPSC of the Science and Technology Department of the University of Naples "Parthenope". If you want RCF supported work to be featured on our website, just send an email about it to rcf@uniparthenope.it.
 
-Seguono alcuni esempi di sezioni Acknowledgments:
+Here are some examples of Acknowledgments sections:
 * This work was completed in part with resources provided by the University of Naples “Parthenope”, Department of Science and Technologies, Research Computing Facilities (https://rcf.uniparthenope.it)
 
 * We are grateful for the support of the University of Naples “Parthenope”, Department of Science and Technologies, Research Computing Facilities (https://rcf.uniparthenope.it) for assistance with the calculations carried out in this work.
