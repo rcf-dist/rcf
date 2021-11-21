@@ -15,14 +15,14 @@ showtoc: false
 |                          |                                |                                     |
 |--------------------------|--------------------------------|-------------------------------------|
 | **_Raffaele Montella_**  | **Responsabile Scientifico**   | raffaele.montella@uniparthenope.it  |
-|                          | Co-direttore di HPSCSmart Lab. |                                     |
+|                          | Co-head of the HPSCSmart Lab. |                                     |
 |                          |                                |                                     |
-| **_Francesco Camastra_** | Direttore del CVPR Lab.        | francesco.camastra@uniparthenope.it |
-| **_Angelo Ciaramella_**  | Direttore del CI&SS Lab.       | angelo.ciaramella@uniparthenope.it  |
-| **_Alessio Ferone_**     | Co-direttore del CVPR Lab      | alessio.ferone@uniparthenope.it     |
-| **_Giulio Giunta_**      | Co-direttore di HPSCSmart Lab. | giulio.giunta@uniparthenope.it      |
-| **_Antonio Maratea_**    | Co-direttore del CI&SSLab.     | antonio.maratea@uniparthenope.it    |
-| **_Antonino Staiano_**   | Direttore di Neptun-IA Lab.    | antonino.staiano@uniparthenope.it   |
+| **_Francesco Camastra_** | Head of the CVPR Lab.        | francesco.camastra@uniparthenope.it |
+| **_Angelo Ciaramella_**  | Head of the CI&SS Lab.       | angelo.ciaramella@uniparthenope.it  |
+| **_Alessio Ferone_**     | Co-head of the CVPR Lab      | alessio.ferone@uniparthenope.it     |
+| **_Giulio Giunta_**      | Co-head of the HPSCSmart Lab. | giulio.giunta@uniparthenope.it      |
+| **_Antonio Maratea_**    | Co-head of the CI&SSLab.     | antonio.maratea@uniparthenope.it    |
+| **_Antonino Staiano_**   | Head of the Neptun-IA Lab.    | antonino.staiano@uniparthenope.it   |
 
 # Associuates
 
@@ -49,3 +49,5 @@ showtoc: false
 |------------------------|-----------------------|------------------|
 | **_Dante D. Sànchez-Gallegos_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
 | **_Armando Barron_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
+| **_Marco Lapegna_** | Università degli Studi di Napoli Federico II, Italia | Raffaele Montella |
+| **_Umberto Scafuri_** | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italia | Giulio Giunta |
