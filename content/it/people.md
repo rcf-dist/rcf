@@ -44,6 +44,7 @@ showtoc: false
 
 # Ricercatori a contratto
 
+|                              |              |
 |------------------------------|--------------|
 | **_Antonio Junior Spoleto_** | SE4I Project | 
 | **_Concetta Vitale_**        | SE4I Project |
