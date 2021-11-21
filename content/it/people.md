@@ -42,6 +42,17 @@ showtoc: false
 | **_Gennaro Mellone_**           | | gennaro.mellone@uniparthenope.it     | | Fenomeni e Rischi Ambientali 37° Ciclo                                              | | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
 | **_Vincenzo Mariano Scarrica_** | | mariano.scariica@uniparthenope.it    | | Dottorato Nazionale Intelligenza Artificiale - Ambito Agrifood e Ambiente 37° Ciclo | | Antonino Staiano, Alessio Ferone                     |
 
+# Ricercatori a contratto
+
+|------------------------------|--------------|
+| **_Antonio Junior Spoleto_** | SE4I Project | 
+| **_Concetta Vitale_**        | SE4I Project |
+| **_Angelo Casolaro_**        | SE4I Project |
+| **_Giovanni Hauber_**        | SE4I Project |
+| **_Gennaro Iannuzzo_**       | SE4I Project |
+| **_Antonio De Trino_**       | SE4I Project |
+| **_Rosario Vallefuoco_**     | SE4I Project |
+
 # Esterni
 
 |                        | Affiliazione          | Sponsor          |
@@ -50,10 +61,4 @@ showtoc: false
 | **_Armando Barron_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
 | **_Marco Lapegna_** | Università degli Studi di Napoli Federico II, Italia | Raffaele Montella |
 | **_Umberto Scafuri_** | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italia | Giulio Giunta |
-| **_Antonio Junior Spoleto_** | SE4I Project | Antonino Staiano |
-| **_Concetta Vitale_**        | SE4I Project | Antonino Staiano |
-| **_Angelo Casolaro_**        | SE4I Project | Antonino Staiano |
-| **_Giovanni Hauber_**        | SE4I Project | Antonino Staiano |
-| **_Gennaro Iannuzzo_**       | SE4I Project | Antonino Staiano |
-| **_Antonio De Trino_**       | SE4I Project | Antonino Staiano |
-| **_Rosario Vallefuoco_**     | SE4I Project | Antonino Staiano |
+
