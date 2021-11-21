@@ -2,7 +2,8 @@
 title: "Connect RCF resources"
 ---
 The following information describes how users can access RCF resources. All users of RCF resources are responsible for knowing and complying with the RCF User Policy.
-#Account credentials
+
+# Account credentials
 To use the RCF provided resources you need to obtain an RCF user account. If you do not already have an RCF account, please refer to the Getting Started page for more information on obtaining an RCF account.
 
 The RCF account uses your name, surname or registration number for the username and password usually used for the IT services of the University of Naples "Parthenope".
