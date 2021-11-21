@@ -60,24 +60,24 @@ $ srun --ntasks=1 \
 > bash
 ```
 
-| Opzione            | Descrizione                                                 |
+| Option             | Description                                                 |
 |--------------------|-------------------------------------------------------------|
-| --ntasks=1         | Un solo task da eseguire                                    |
-| --nodes=1          | Richiede un unico nodo                                      |
-| --partition=xhicpu | Richiede i nodi di calcolo presenti sulla partizione xhicpu |
-| --cpus-per-task=8  | Richiede di allocare 8 CPU per ogni task                    |
-| --mem=4000         | Richiede di utilizzare un totale di 4000 MB (4 GB)          | 
-| --pty              | Esegue il task in modalità terminale                        |
-| bash               |Eseguibile da lanciare, in questo caso il comando bash       |
+| --ntasks=1         | Only one task to perform                                    |
+| --nodes=1          | Ask for one node                                      |
+| --partition=xhicpu | Request xhicpu partition nodes |
+| --cpus-per-task=8  | Request to allocate 8 CPU for each task                    |
+| --mem=4000         | Request using a total memory of 4000 MB (4 GB)          | 
+| --pty              | Launch task in terminal mode                        |
+| bash               |Executable to run, in this case bash command       |
 
 In this example, only the wnode01 node will be used, requiring a limited number of resources (44GB of memory and 8 CPUs for 1 task), this allows the parallel execution of multiple jobs (without distinction between srun and sbatch)
 
-## Job di tipo Batch
-Il comando sbatch è il comando più comunemente usato dagli utenti RCF per richiedere risorse di calcolo sul cluster purpleJeans. Anziché specificare tutte le opzioni nella riga di comando, gli utenti in genere scrivono uno “script sbatch” che contiene tutti i comandi e i parametri necessari per eseguire il programma sul cluster.
+## Batch Job Type
+The sbatch command is the command most commonly used by RCF users to request compute resources on the purpleJeans cluster. Instead of specifying all options on the command line, users typically write a “script sbatch” that contains all the commands and parameters needed to run the program on the cluster.
 
-In uno script sbatch, tutti i parametri di Slurm sono dichiarati con #SBATCH, seguito da ulteriori definizioni.
+In a sbatch script, all Slurm parameters are declared with #SBATCH, followed by further definitions.
 
-Ecco un esempio di uno script sbatch:
+Here is an example of a sbatch script:
 
 ```sh
 #!/bin/bash
@@ -90,119 +90,127 @@ Ecco un esempio di uno script sbatch:
 #SBATCH --ntasks-per-node=16
 #SBATCH --mem-per-cpu=2000
  
-module load openmpi
+# Set stack size (to avoid warning message)
+ulimit -s 10240
+
+# Load OpenMPI module
+module load ompi-4.1.0-gcc-8.3.1
+
+# Run
 mpirun ./hello-mpi
 ```
 
-Di seguito i dettagli dei comandi:
+Below are the details of the commands:
 
-| Opzione                     | Descrizione                                                                           |
+| Option                     | Description                                                                           |
 |-----------------------------|---------------------------------------------------------------------------------------|
-|#SBATCH --job-name=example   |Assegna il nome example al job                                                         |
-|#SBATCH --output=example.out |Scrive l’output della console nel file example.out                                     |
-|#SBATCH --error=example.err  |Scrive il messaggio di errore nel file example.err                                     |
-|#SBATCH --time=00:10:00      |Riserva le risorse richiesta per 10 minuti (o anche meno se il processo termina prima) |
-|#SBATCH --partition=xhicpu   |Richiede i nodi di calcolo presenti sulla partizione xhicpu                            |
-|#SBATCH --nodes=4            |Richiede 4 nodi di calcolo                                                             |
-|#SBATCH --ntasks-per-node=16 |Richiede 16 CPU per ogni singolo nodo                                                  |
-|#SBATCH --mem-per-cpu=2000   |Richiede 2000 MB (2 GB) di memoria RAM per singola CPU                                 |
+| #SBATCH --job-name = example | Assign the name example to the job |
+| #SBATCH --output = example.out | Write console output to example.out |
+| #SBATCH --error = example.err | Write the error message to the file example.err |
+| #SBATCH --time = 00: 10: 00 | Reserve requested resources for 10 minutes (or even less if the process ends earlier) |
+| #SBATCH --partition = xhicpu | Requires compute nodes present on the xhicpu partition |
+| #SBATCH --nodes = 4 | Requires 4 compute nodes |
+| #SBATCH --ntasks-per-node = 16 | Requires 16 CPUs for each single node |
+| #SBATCH --mem-per-cpu = 2000 | Requires 2000MB (2GB) of RAM per single CPU|
 
-In questo esempio, abbiamo richiesto 4 nodi di calcolo con 16 CPU ciascuno. Pertanto, abbiamo richiesto un totale di 64 CPU per l'esecuzione del nostro programma. Le ultime due righe dello script caricano il modulo OpenMPI e avviano l'eseguibile basato su MPI che abbiamo chiamato hello-mpi (vedi job MPI).
+In this example, we required 4 compute nodes with 16 CPUs each. Therefore, we required a total of 64 CPUs to run our program. The last two lines of the script load the OpenMPI module and start the MPI-based executable we called hello-mpi (see MPI job).
 
-Continuando l'esempio sopra, supponiamo che questo script sia salvato nella directory corrente in un file chiamato example.sbatch. Questo script viene inviato al cluster usando il comando seguente:
+Going on the example above, let's assume this script is stored in the current directory in a file called example.sbatch. This script is sent to the cluster using the following command:
 
 ```sh
 $ sbatch ./example.sbatch
 ```
 
-Molte altre opzioni sono disponibili per l'invio di lavori utilizzando il comando sbatch. Per esigenze computazionali più specializzate, consultare Esecuzione di job su purpleJeans (link). Inoltre, per un elenco completo delle opzioni disponibili, consultare la documentazione ufficiale SBATCH (link: https://slurm.schedmd.com/sbatch.html ).
+Many other options are available for submitting jobs using the sbatch command. For more specialized computational needs, see Running Jobs on purpleJeans (link). Also, for a complete list of available options, see the official SBATCH documentation (link: https://slurm.schedmd.com/sbatch.html).
 
-# Storage temporaneo
-Molte applicazioni generano file temporanei o intermedi scritti in /tmp. (Queste applicazioni possono scrivere file su /tmp anche senza che tu sappia che ciò sta accadendo.) Questa cartella si trova in genere su un'unità locale o sul disco RAM virtualizzato nella memoria di sistema.
+**Please note:**
+Setting the stack size is a good idea to avoid runtime warning messages.
+```ulimit -s 10240```
 
-- I contenuti in /tmp lasciati dal lavoro di un utente non verranno automaticamente eliminati prima di riavviare il nodo corrispondente, e pertanto potrebbero influire su altri lavori eseguiti in seguito sullo stesso nodo. Pertanto, RCF applica una politica di eliminazione dei dati per i file scritti in / tmp su nodi di calcolo:
+# Temporary storage
+Many applications generate temporary or intermediate files written in /tmp. (These applications can write files to /tmp even without you knowing this is happening.) This folder is typically located on a local drive or virtualized RAM disk in system memory.
 
-- Per ciascun job in esecuzione, viene creata una cartella /tmp/jobs/${SLURM_JOB_ID}, leggibile e scrivibile solo dal job, su ciascun nodo assegnato. Il suo contenuto viene eliminato in modo sicuro solo al termine del job (quando viene completato, annullato o ucciso con successo).
+- Contents in /tmp left by a user's job will not be automatically deleted before restarting the corresponding node, and therefore may affect other jobs that are subsequently run on the same node. Therefore, RCF enforces a data purge policy for files written to /tmp on compute nodes:
+  
+- For each running job, a folder /tmp /jobs /${SLURM_JOB_ID}, readable and writable only by the job, is created on each assigned node. Its content is only safely deleted after the job is finished (when it is successfully completed, canceled or killed).
 
-- Per tutti i job in esecuzione, le variabili di ambiente SLURM_TMPDIR e TMPDIR sono impostate su /tmp/jobs/${SLURM_JOB_ID}. Quando possibile, gli utenti dovrebbero scrivere nei percorsi specificati da queste variabili d'ambiente anziché usare esplicitamente /tmp. (La maggior parte delle applicazioni dovrebbe già utilizzare queste variabili di ambiente per impostazione predefinita, quindi in molti casi ciò non richiede alcuna modifica al codice.)
+- For all running jobs, the SLURM_TMPDIR and TMPDIR environment variables are set to /tmp/jobs/${SLURM_JOB_ID}. Whenever possible, users should write to the paths specified by these environment variables rather than explicitly using / tmp. (Most applications should already use these environment variables by default, so in many cases this doesn't require any code changes.)
 
-- Oltre a utilizzare $TMPDIR, gli utenti dovrebbero anche verificare che non vengano scritti altri file su /tmp.
+- In addition to using $TMPDIR, users should also ensure that no other files are written to /tmp.
 
-- Notare che al termine di un job, eventuali cartelle o file direttamente in /tmp che appartengono al mittente di questo lavoro verranno eliminati.
+- Note that after a job ends, any folders or files directly in /tmp that belong to the sender of this job will be deleted.
 
-- I contenuti di /tmp non persistono al termine dei lavori. RCF non è responsabile per il recupero o il recupero dei dati memorizzati lì. Per gli output critici, salvarli nei sistemi di archiviazione dei file persistenti; vedere Archiviazione e trasferimento dati.
+- The contents of /tmp do not persist at the end of the works. RCF is not responsible for the retrieval or recovery of the data stored there. For critical outputs, save them to persistent file storage systems; see Archiving and data transfer.
 
-**Importante:**
-Le cartelle o i file creati dagli utenti in /tmp all'esterno di $TMPDIR sono accessibili da tutti i job sottomessi dallo stesso utente ed in esecuzione sul nodo. Ad esempio, considerare il caso in cui l'utente ha due job in esecuzione (A e B) sullo stesso nodo e il lavoro B sta scrivendo direttamente i file in /tmp. Se il lavoro A termina prima del lavoro B, anche il contenuto di /tmp verrà eliminato e, in alcuni casi, il lavoro B potrebbe non riuscire. Per evitare errori, gli utenti devono quindi scrivere qualsiasi dato temporaneo nella cartella protetta da lavoro, SLURM_TMPDIR o TMPDIR.
+**Important:**
+Folders or files created by users in /tmp outside $TMPDIR are accessible by all jobs submitted by the same user and running on the node. For example, consider the case where the user has two jobs running (A and B) on the same node and job B is writing files to / tmp directly. If job A ends before job B, the contents of / tmp will also be deleted and, in some cases, job B may fail. To avoid errors, users must then write any temporary data to the secure working folder, SLURM_TMPDIR or TMPDIR.
 
-# Gestire i Job
-Lo Slurm offre diversi strumenti da riga di comando per controllare lo stato dei lavori e gestirli. Per un elenco completo dei comandi di Slurm, consultare le pagine man di Slurm (link: https://slurm.schedmd.com/man_index.html ). Ecco alcuni comandi che potresti trovare particolarmente utili:
+# Job Management
+The Slurm offers several command line tools to check the status of jobs and manage them. For a complete list of Slurm commands, see the Slurm man pages (link: https://slurm.schedmd.com/man_index.html). Here are some commands you might find particularly useful:
+- **squeue**: find out the status of jobs submitted by you and other users.
+- **sacct**: Retrieve job history and past job statistics.
+- **scancel**: cancel the jobs you sent.
 
-- squeue: scopre lo stato dei job inviati da te e da altri utenti.
-- sacct: recupera la cronologia dei job e le statistiche sui lavori passati.
-- scancel: annulla i job che hai inviato.
-
-## Controllare lo stato di un Job
-Utilizzare il comando squeue per verificare lo stato dei job e altri job in esecuzione su purpleJeans. La chiamata più semplice elenca tutti i job che sono attualmente in esecuzione o in attesa nella coda dei job ("PENDING"), insieme ai dettagli su ciascun job come l'id e il numero di nodi richiesti:
+## Checking Job Status
+Use the **squeue** command to check the status of jobs and other jobs running on purpleJeans. The simplest call lists all the jobs that are currently running or waiting in the job queue ("PENDING"), along with details about each job such as the id and number of nodes required:
 
 ```sh
 $ squeue
 ```
+Any jobs with 0:00 in the “TIME” column are still waiting in the queue.
 
-Qualsiasi job con 0:00 nella colonna “TIME” è ancora in attesa nella coda.
-
-Per visualizzare solo i job inviati, utilizzare il flag --user
+To view only submitted jobs, use the *--user* flag
 
 ```sh
 $ squeue --user=$USER
 ```
 
-Questo comando ha molte altre opzioni utili per interrogare lo stato della coda e ottenere informazioni sui singoli lavori. Ad esempio, per ottenere informazioni su tutti i lavori in attesa di esecuzione sulla partizione xhicpu, immettere:
+This command has many other useful options for querying the queue status and getting information about individual jobs. For example, to get information about all jobs waiting to run on the xhicpu partition, enter:
 
 ```sh
 $ squeue --state=PENDING --partition=xhicpu
 ```
 
-In alternativa, per ottenere informazioni su tutti i lavori in esecuzione sulla partizione xhicpu, digitare:
+Alternatively, to get information about all jobs running on the xhicpu partition, type:
 
 ```sh
 $ squeue --state=RUNNING --partition=xhicpu --user=$USER
 ```
 
-L'ultima colonna dell'output ci dice quali nodi sono allocati per ciascun job. Ad esempio, se 
-mostra wnode01 per uno dei job con il tuo nome, puoi digitare 
+The last column of the output tells us which nodes are allocated for each job. For example, if
+show wnode01 for one of the jobs with your name, you can type:
 
 ```sh
 $ ssh wnode01 
 ```
 
-per accedere a quel nodo di calcolo e controllarne l'avanzamento in locale.
+to access that compute node and check its progress locally.
 
-Per ulteriori informazioni, consultare la guida della riga di comando digitando squeue --help o visitare la documentazione online ufficiale.
+For more information, consult the command line help by typing squeue --help or visit the official online documentation.
 
-## Cancellare i Job
-Per annullare un job inviato, utilizzare il comando scancel. Ciò richiede di specificare l'id del job che si desidera annullare. Ad esempio, per annullare un job con ID 1008, procedere come segue:
+## Cancel Jobs
+To cancel a submitted job, use the **scancel** command. This requires you to specify the id of the job you want to cancel. For example, to cancel a job with ID 1008, proceed as follows:
 
 ```sh
 $ scancel 1008
 ```
 
-Se non si è sicuri di quale sia l'id del lavoro che si desidera annullare, vedere la colonna “JOBID” dall'esecuzione di squeue --user=$USER.
+If you are unsure which job id you want to cancel, see the “JOBID” column from running squeue --user = $ USER.
 
-Per annullare più di un job separare gli id con una virgola:
+To cancel more than one job separate the ids with a comma:
 
 ```sh
 $ scancel 1008,1009,1012
 ```
 
-Per annullare tutti i job inviati in esecuzione o in attesa in coda:
+To cancel all submitted jobs that are running or waiting in queue:
 
 ```sh
 $ scancel --user=$USER
 ```
 
-## Job steps paralleli
-I job che coinvolgono un numero molto elevato di calcoli indipendenti dovrebbero essere combinati in qualche modo per ridurre il numero di lavori inviati a Slurm. Qui illustriamo una strategia per farlo usando srun. Il programma parallelo esegue le attività contemporaneamente fino a quando tutte le attività, che vengono chiamate job steps, non sono state completate. 
+## Parallel job steps
+Jobs involving a very large number of independent computations should be combined in some way to reduce the number of jobs submitted to Slurm. Here we outline a strategy for doing this using srun. The parallel program executes the tasks simultaneously until all the tasks, which are called job steps, are completed.
 
 ```sh
 #!/bin/bash
@@ -221,36 +229,34 @@ srun -n1 --exclusive ./program3.sh &
 wait
 ```
 
-| Opzione | Descrizione |
+| Option | Description |
 |------------------------------------|-------------|
-|#SBATCH --job-name=parallel-tasks   |Assegna il nome parallel-tasks al job |
-|#SBATCH --output=parallel-tasks.out |Scrive l’output della console nel file parallel-tasks.out |
-|#SBATCH --error=parallel-tasks.err  |Scrive il messaggio di errore nel file parallel-tasks.err |
-|#SBATCH --partition=xhicpu          |Richiede i nodi di calcolo presenti sulla partizione xhicpu |
-|#SBATCH --nodes=1                   |Richiede 1 nodo di calcolo |
-|#SBATCH --ntasks=3 |Richiede l’esecuzione di massimo 3 tasks paralleli |
-|#SBATCH --mem-per-cpu=2000 |Richiede 2000 MB (2 GB) di memoria RAM per singola CPU |
+| #SBATCH --job-name = parallel-tasks | Name the job parallel-tasks |
+| #SBATCH --output = parallel-tasks.out | Write console output to parallel-tasks.out file |
+| #SBATCH --error = parallel-tasks.err | Write the error message to the parallel-tasks.err file |
+| #SBATCH --partition = xhicpu | Requires compute nodes present on the xhicpu partition |
+| #SBATCH --nodes = 1 | Requires 1 compute node |
+| #SBATCH --ntasks = 3 | Requires the execution of up to 3 parallel tasks |
+| #SBATCH --mem-per-cpu = 2000 | Requires 2000MB (2GB) of RAM per single CPU |
 
-L’esempio vuole eseguire un unico job in cui vengono eseguiti tre programmi in modo parallelo che non sono obbligatoriamente collegati tra di loro. Per poter eseguire più di un singolo task bisogna specificare il flag --ntasks che di default è posto a 1. Una volta specificato possiamo utilizzare il comando srun all’interno del file sbatch ed utilizzare al termine di ogni riga il simbolo &. Ogni srun può avere dei propri argomenti, che devono essere coerenti con le risorse massime richieste dallo script. Nell’esempio ogni srun richiede esattamente un task con l’opzione -n1 (una singola CPU), il parametro --exclusive, che non è obbligatorio, assicura che venga allocata una CPU distinta per ogni attività. Il comando wait attende che tutti i task terminino, falliscano o vengano uccisi (killed).
+The example wants to execute a single job in which three programs are executed in parallel that are not necessarily connected to each other. In order to perform more than a single task, the --ntasks flag must be specified, which by default is set to 1. Once specified, we can use the srun command within the sbatch file and use the & symbol at the end of each line. Each srun can have its own arguments, which must be consistent with the maximum resources required by the script. In the example, each srun requires exactly one task with the -n1 option (a single CPU), the --exclusive parameter, which is not mandatory, ensures that a separate CPU is allocated for each activity. The wait command waits for all tasks to finish, fail or be killed.
 
 ## GPU Job
-La partizione xgpu è dedicata al software che utilizza GPU (Graphical Processing Unit). 
+The **xgpu** partition is dedicated to software that uses Graphical Processing Unit (GPU).
 
-CUDA e OpenACC sono due strumenti ampiamente utilizzati per lo sviluppo di software basato su GPU. Per informazioni sulla compilazione di codice con CUDA e OpenACC, consultare le rispettive documentazioni online.
+CUDA and OpenACC are two widely used tools for GPU-based software development. For information on compiling code with CUDA and OpenACC, consult the respective online documentation.
 
-### Eseguire codice GPU
+### Run GPU code
 
-Per inoltrare un job a uno dei nodi GPU, è necessario includere le seguenti righe di comando nello script sbatch (equivalentemente per srun):
+To submit a job to one of the GPU nodes, you need to include the following command lines in the sbatch script (srun equivalently):
 
 ```sh
 #SBATCH --partition=xgpu
 #SBATCH --gres=gpu:tesla:N
 ```
 
-Dove --gres richiede esplicitamente la risorsa GPU, gpu:tesla è la nomenclatura specifica da utilizzare su purpleJeans, N è il numero di GPU richieste. Impostazioni consentite per l'intervallo N da 1 a 4. Se l'applicazione è interamente basata su GPU, non è necessario esplicitamente richiedere core poiché un core CPU verrà assegnato per impostazione predefinita come master per avviare il calcolo basato su GPU. Se tuttavia la tua applicazione è CPU-GPU mista, dovrai richiedere il numero di core con –-ntasks come richiesto dal tuo job. 
-Slurm imposta automaticamente la variabile d'ambiente CUDA_VISIBLE_DEVICES con la risorsa GPU libera al momento della richiesta. Non tentare di impostare manualmente la variabile CUDA_VISIBLE_DEVICES.
-
-
+Where --gres explicitly requests the GPU resource, gpu: tesla is the specific nomenclature to use on purpleJeans, N is the number of GPUs required. Allowed settings for range N from 1 to 4. If your application is fully GPU-based, there is no need to explicitly request cores as a CPU core will be assigned by default as the master to start GPU-based compute. However, if your application is a mixed CPU-GPU, you will need to request the number of cores with –-ntasks as required by your job.
+Slurm automatically sets the CUDA_VISIBLE_DEVICES environment variable with the GPU resource free at the time of the request. Do not try to manually set the CUDA_VISIBLE_DEVICES variable.
 
 Ecco un esempio di script sbatch che alloca le risorse della GPU e carica i compilatori CUDA
 
@@ -264,29 +270,32 @@ Ecco un esempio di script sbatch che alloca le risorse della GPU e carica i comp
 #SBATCH --partition=xgpu
 #SBATCH --ntasks=1       
 #SBATCH --gres=gpu:tesla:1     
- 
+
+# Set stack size (to avoid warning message)
+ulimit -s 10240
+
 module load cuda/10.1
- 
-# Aggiungere i comandi necessari ad eseguire l'elaborazione GPU
+
+# Add the commands needed to perform GPU processing
 ```
 
-| Opzione | Descrizione |
+| Option | Description |
 |---------------------------|-----------------------------------------------------------------------------|
-|#SBATCH --job-name=gpu     | Assegna il nome gpu al job                                                  |
-|#SBATCH --output=gpu.out   | Scrive l’output della console nel file gpu.out                              |
-|#SBATCH --error=gpu.err    |Scrive il messaggio di errore nel file gpu.err                               |
-|#SBATCH --time=01:00:00    |Riserva le risorse richiesta per 1 ora (o meno se il processo termina prima) |
-|#SBATCH --nodes=1          |Richiede 1 nodo di calcolo                                                   |
-|#SBATCH --partition=xgpu   |Richiede i nodi di calcolo presenti sulla partizione xgpu                    |
-|#SBATCH --ntasks=1         |Un solo task da eseguire                                                     |
-|#SBATCH --gres=gpu:tesla:1 |Richiede un’unica GPU                                                        |
+| #SBATCH --job-name = gpu | Name the job gpu |
+| #SBATCH --output = gpu.out | Writes console output to gpu.out |
+| #SBATCH --error = gpu.err | Write the error message to the gpu.err file |
+| #SBATCH --time = 01: 00: 00 | Reserve requested resources for 1 hour (or less if process ends earlier) |
+| #SBATCH --nodes = 1 | Requires 1 compute node |
+| #SBATCH --partition = xgpu | Requires compute nodes present on xgpu partition |
+| #SBATCH --ntasks = 1 | Only one task to run |
+| #SBATCH --gres = gpu: tesla: 1 | Requires only one GPU
 
-Importante. Le scorciatoie “gres” per l’utilizzo delle GPU, riportate sulla documentazione ufficiale, non sono configurate. 
+**Important**: The "stoneware" shortcuts for using GPUs, shown in the official documentation, are not configured.
 
-### Job multipli sui nodi
-L’esecuzione di un job su di un nodo di calcolo non assegna quel nodo in modo esclusivo all’utente che ha eseguito il job. Questo è possibile con una richiesta responsabile delle risorse di calcolo disponibili. E’ possibile eseguire più job su singolo nodo anche se il job in esecuzione è di un altro utente, senza interferire con esso. Per fare questo è necessario specificare i parametri negli “script sbatch” o srun che permettono di riservare le sole risorse di cui si ha bisogno.
+### Multiple Jobs on nodes
+Running a job on a compute node does not assign that node exclusively to the user who performed the job. This is possible with a responsible request for the available computing resources. It is possible to run multiple jobs on a single node even if the job being executed belongs to another user, without interfering with it. To do this it is necessary to specify the parameters in the "sbatch scripts" or srun that allow you to reserve only the resources you need.
 
-Vediamo il seguente esempio:
+Let's see the following example:
 
 ```sh
 #!/bin/bash
@@ -296,14 +305,17 @@ Vediamo il seguente esempio:
 #SBATCH --ntasks=1
 #SBATCH --mem=16000
 #SBATCH --cpus-per-tasks=8
- 
+
+# Set stack size (to avoid warning message)
+ulimit -s 10240
+
 ./program1.sh
 ```
 
-Nell’esempio viene richiesto di eseguire un job allocando 16GB di memoria e 8 CPU Core totali sul nodo che verrà assegnato dallo scheduler. Considerando che tale nodo ha 192GB di RAM e 32 CPU Core, il nodo ha ancora a disposizione abbastanza risorse (176GB e 24 CPU Core) per permettere ad altri job di poter essere eseguiti su di esso.
+In the example, you are asked to execute a job by allocating 16GB of memory and a total of 8 CPU Cores on the node that will be assigned by the scheduler. Considering that this node has 192GB of RAM and 32 CPU Cores, the node still has enough resources (176GB and 24 CPU Cores) to allow other jobs to run on it.
 
-Conoscere le risorse libere su ogni singolo nodo
-Per conoscere le risorse libere su ogni singolo nodo di ogni partizione, in modo da poter allocare le risorse necessarie per il job che si sta cercando di lanciare è possibile utilizzare il comando sinfo con le seguenti opzioni:
+## Know the free resources on each single node
+To know the free resources on each single node of each partition, so as to be able to allocate the necessary resources for the job you are trying to launch, you can use the sinfo command with the following options:
 
 ```sh
 $ sinfo -N -o "%N %.5a %.11T %.10l %.10m %.10e %.15C" 
@@ -319,19 +331,19 @@ wnode03     up  allocated   12:00:00   178000   182190     32/0/0/32
 wnode04     up  allocated   12:00:00   178000   180030     32/0/0/32
 ```
 
-| Opzione | Descrizione                                                                |
+| Option | Description |                                                              
 |---------|----------------------------------------------------------------------------|
-| -N      | Stampa le informazioni per ogni singolo nodo                               |
-| -o      | Specifica quali informazioni visualizzare                                  |
-| %N      | Lista dei nodi                                                             | 
-| %.5a    | Disponibilità del nodo                                                     |
-| %.11T   | Stato del nodo                                                             |
-| %.10l   | Limite di tempo per cui è possibile eseguire un singolo job                |
-| %.10m   | Memoria totale del nodo                                                    |
-| %.10e   | Memoria libera richiedibile del nodo                                       |
-| %.15C   | Quantità di CPU in ogni possibile stato (Allocated / Idle / Other / Total) |
+| -N | Print the information for each single node |
+| -o | Specify what information to display |
+| % N | List of nodes |
+| % .5a | Availability of the node |
+| % .11T | Node state |
+| % .10l | Time limit for which a single job can be run |
+| % .10m | Total node memory |
+| % .10e | Required free memory of the node |
+| % .15C | Amount of CPU in each possible state (Allocated / Idle / Other / Total) |
 
-Per verificare anche lo stato dell’allocazione delle risorse definite generiche (es. GPU) è possibile usare ad esempio il seguente comando:
+To also check the status of the allocation of the defined generic resources (eg GPU), you can use the following command, for example:
 
 ```sh
 $ sinfo -N -O "nodelist:12,freemem:10,cpusstate:15,gresused"
@@ -346,40 +358,54 @@ wnode02     180899    32/0/0/32      gpu:0
 wnode03     179464    32/0/0/32      gpu:0               
 wnode04     179768    32/0/0/32      gpu:0  
 ```
+**Please Note**: The equivalent of gresused is not available using the -o option. To know all the possible information that can be displayed, refer to the official sinfo documentation.
 
-N.B. L’equivalente di gresused non è disponibile utilizzando l’opzione -o. Per conoscere tutte le possibili informazioni visualizzabili rifarsi alla documentazione ufficiale di sinfo. 
+### Job Limits
+To distribute compute resources equally to all purpleJeans users, RCF sets limits on the amount of compute resources that can be required by a single user at any one time.
 
-### Limiti ai Job
-Per distribuire le risorse di calcolo in modo equo a tutti gli utenti di purpleJeans, RCF stabilisce limiti sulla quantità di risorse di elaborazione che possono essere richieste da un singolo utente in qualsiasi momento.
+The maximum execution time for a single job (batch or interactive) is 12 hours for the xhicpu partition and 6 hours for the xgpu partition.
 
-Il tempo di esecuzione massimo per un singolo job (batch o interattivo) è di 12 ore per la partizione xhicpu e di 6 ore per la partizione xgpu.
+Additional information about limits, such as the maximum number of CPUs that a user can request at any one time or the number of jobs that can be submitted simultaneously on a given partition, is available by entering the qos command on any purpleJeans login or compute node. . Note that these limits are often different depending on the partition.
 
-Ulteriori informazioni sui limiti, come il numero massimo di CPU che possono essere richieste da un utente in qualsiasi momento o il numero di lavori che possono essere inviati contemporaneamente su una determinata partizione, sono disponibili inserendo il comando qos su qualsiasi nodo login o calcolo di purpleJeans. Si noti che questi limiti sono spesso diversi a seconda della partizione.
+Usage limits may vary, the qos command always provides the most up-to-date information.
 
-I limiti di utilizzo possono variare, il comando qos fornisce sempre le informazioni più aggiornate.
-
-Se il lavoro di ricerca dell’utente richiede un'eccezione temporanea a un limite particolare, è possibile richiedere un'assegnazione speciale contattando RCF (rcf@uniparthenope.it). Le allocazioni speciali sono valutate su base individuale e possono essere concesse o meno.
+If the user's research work requires a temporary exception to a particular limit, a special assignment can be requested by contacting RCF (rcf@uniparthenope.it). Special allocations are valued on an individual basis and may or may not be granted.
 
 # Software
-purpleJeans utilizza i moduli di ambiente per la gestione del software. Il sistema dei moduli consente di impostare l'ambiente shell per facilitare l'esecuzione e la compilazione del software. Consente inoltre di rendere disponibili numerosi pacchetti software e librerie che altrimenti sarebbero in conflitto tra loro.
 
-Quando accedi per la prima volta a purpleJeans, verrai inserito in un ambiente utente molto basilare con un software minimo disponibile. Il sistema del modulo è un sistema basato su script utilizzato per gestire l'ambiente utente e per "attivare" i pacchetti software. Per accedere al software installato su purpleJeans, è innanzitutto necessario caricare il modulo software corrispondente.
+purpleJeans uses environment modules for software management. The module system allows you to set up the shell environment to make it easier to run and compile the software. It also allows you to make available numerous software packages and libraries that would otherwise conflict with each other.
 
-Comandi base module:
+When you first log into purpleJeans, you will be placed in a very basic user environment with minimal software available. The module system is a script-based system used to manage the user environment and to "activate" software packages. To access the software installed on purpleJeans, you must first load the corresponding software module.
 
-| Comando              | Descrizione                                       |
+Base module commands:
+
+| Command | Description |
 |----------------------|---------------------------------------------------|
-| module avail         | elenca tutti i moduli software disponibili        |
-| module disp [name]   | elenca i moduli corrispondenti a [name]           |
-| module load [name]   | carica il modulo denominato                       |
-| module unload [name] | scarica il modulo indicato                        |
-| module list          | elenca i moduli attualmente caricati per l'utente |
+| module avail | list all available software modules |
+| module disp [name] | list modules matching [name] |
+| module load [name] | loads the module named |
+| module unload [name] | download the indicated form |
+| module list | list modules currently loaded for user |
 
-Elenco completo dei moduli software:
+Complete list of software modules:
 
 ```
-gcc-8.3.1            ompi-4.0.1-gcc-4.8.5 ompi-4.0.1-gcc-8.3.1
-intel_MKL-2019u5
-anaconda/3               cuda/10.1                pgi/19.9(default)        pgi-llvm                 PrgEnv-pgi/19.9(default)
-cuda/10.0                openmpi/3.1.3/2019       pgi/2019                 pgi-nollvm               vapor/3.2.0
+anaconda/3                                     netcdf/4.8.1-gcc-4.8.5
+cmake/3.19.2                                   netcdf/4.8.1-gcc-8.3.1
+cmake/3.21.4                                   null
+cuda/10.0                                      nvhpc/20.11
+cuda/10.1                                      nvhpc-byo-compiler/20.11
+cuda/11.0                                      nvhpc-nompi/20.11
+cuda/11.2                                      ompi-4.0.1-gcc-4.8.5
+cuda/11.3                                      ompi-4.0.1-gcc-8.3.1
+cuda/11.4.2                                    ompi-4.1.0-gcc-8.3.1
+cuda/11.5                                      opengrads/2.2.1
+dot                                            openmpi/3.1.3/2019
+gcc-8.3.1                                      paraview/5.8.1
+intel_MKL-2019u5                               tau/tau-2.30.2-ompi-4.0.1-cuda-11.2-gcc-4.8.5
+jasper/2.0.14-gcc-8.3.1                        tau/tau-2.30.2-ompi-4.1.0-cuda-11.2-gcc-8.3.1
+module-git                                     use.own
+module-info                                    vapor/3.2.0
+modules                                        vapor/3.3.0
+mvapich2-2.3.5-gcc-8.3.1 
 ```
