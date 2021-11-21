@@ -67,7 +67,7 @@ copyright = "Everything is mine"
 home = ["HTML", "RSS"]
 
 [params]
-  header_image = "img/jeans.jpeg"
+  header_image = "img/new_purple.jpg"
   SEOTitle = "Research Computing Facilities"
   description = ""
   keyword = "raffaele, montella, high performance computing, hpc, uniparthenope, università degli studi di napoli parthenope, parthenope, dipartimento di scienze e tecnologie"
