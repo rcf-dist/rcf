@@ -50,3 +50,10 @@ showtoc: false
 | **_Armando Barron_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
 | **_Marco Lapegna_** | Università degli Studi di Napoli Federico II, Italia | Raffaele Montella |
 | **_Umberto Scafuri_** | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italia | Giulio Giunta |
+| **_Antonio Junior Spoleto_** | SE4I Project | Antonino Staiano |
+| **_Concetta Vitale_**        | SE4I Project | Antonino Staiano |
+| **_Angelo Casolaro_**        | SE4I Project | Antonino Staiano |
+| **_Giovanni Hauber_**        | SE4I Project | Antonino Staiano |
+| **_Gennaro Iannuzzo_**       | SE4I Project | Antonino Staiano |
+| **_Antonio De Trino_**       | SE4I Project | Antonino Staiano |
+| **_Rosario Vallefuoco_**     | SE4I Project | Antonino Staiano |
