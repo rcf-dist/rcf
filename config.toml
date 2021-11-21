@@ -110,6 +110,12 @@ home = ["HTML", "RSS"]
   [[params.bookmark_link]]
   title = "Neptun-IA"
   href =  "http://neptunia.uniparthenope.it"
+  [[params.bookmark_link]]
+  title = "HPC: Key Technologies and Tools"
+  href = "https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/hpc-key-technologies-and-tools"
+  [[params.bookmark_link]]
+  title = "Consorzio Interuniversitario Nazionale per l'Informatica"
+  href = "https://www.consorzio-cini.it"
 
 [markup]
   [markup.tableOfContents]
