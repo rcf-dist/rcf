@@ -11,7 +11,8 @@ showtoc: true
 ---
 
 Le informazioni successive descrivono come gli utenti possono accedere alle risorse RCF. Tutti gli utenti delle risorse RCF sono responsabili della conoscenza e del rispetto della Politica dell'utente RCF. 
-Credenziali Account
+
+# Credenziali Account
 Per utilizzare le risorse fornite RCF è necessario ottenere un account utente RCF. Se non si dispone già di un account RCF, consultare la pagina Guida introduttiva per ulteriori informazioni su come ottenere un account RCF.
 
 L’account RCF utilizza il tuo nome.cognome o numero_di_matricola per il nome utente e la password usata abitualmente per i servizi informatici dell’Università degli Studi di Napoli “Parthenope”.
