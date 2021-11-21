@@ -48,3 +48,5 @@ showtoc: false
 |------------------------|-----------------------|------------------|
 | **_Dante D. Sànchez-Gallegos_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
 | **_Armando Barron_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
+| **_Marco Lapegna_** | Università degli Studi di Napoli Federico II, Italia | Raffaele Montella |
+| **_Umberto Scafuri_** | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italia | Giulio Giunta |
