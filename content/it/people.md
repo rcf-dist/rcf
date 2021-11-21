@@ -22,6 +22,7 @@ showtoc: false
 | **_Alessio Ferone_**     | Co-direttore del CVPR Lab      | alessio.ferone@uniparthenope.it     |
 | **_Giulio Giunta_**      | Direttore di HPSCSmart Lab.    | giulio.giunta@uniparthenope.it      |
 | **_Antonio Maratea_**    | Co-direttore del CI&SSLab.     | antonio.maratea@uniparthenope.it    |
+| **_Antonino Staiano_**   | Direttore di Neptun-IA Lab.    | antonino.staiano@uniparthenope.it   |
 
 # Associati
 
@@ -30,18 +31,35 @@ showtoc: false
 | **_Aniello Castiglione_** | aniello.castiglione@uniparthenope.it |
 | **_Diana Di Luccio_**     | diana.diluccio@uniparthenope.it      |
 | **_Livia Marcellino_**    | livia.marcellino@uniparthenope.it    |
-| **_Antonino Staiano_**    | antonino.staiano@uniparthenope.it    |
 
 # Dottorandi
 
-|                        | |                                  |
-|------------------------|-|----------------------------------|
-| **_Emanuel Di Nardo_** | | emanuel.dinardo@uniparthenope.it |
+|                                 |                                           |                                                                           | Tutor                                                |
+|---------------------------------|-------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------|
+| **_Ciro Giuseppe De Vita_**     | cirogiuseppe.devita@uniparthenope.it      | Fenomeni e Rischi Ambientali                                              | Raffaele Montella, Angelo Ciaramella                 |
+| **_Pasquale De Luca_**          | pasquale.deluca@uniparthenope.it          | Environment, Resources and Sustainable Development                        | Giulio Giunta, Ardelio Galletti, Livia Marcellino    |         
+| **_Emanuel Di Nardo_**          | emanuel.dinardo@uniparthenope.it          |                                                                           | Angelo Ciaramella                                    |
+| **_Gennaro Mellone_**           | gennaro.mellone@uniparthenope.it          | Fenomeni e Rischi Ambientali                                              | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
+| **_Vincenzo Mariano Scarrica_** | vincenzomariano.scarrica@uniparthenope.it | Dottorato Nazionale Intelligenza Artificiale - Ambito Agrifood e Ambiente | Antonino Staiano, Alessio Ferone                     |
+
+# Ricercatori a contratto
+
+|                              |              |
+|------------------------------|--------------|
+| **_Antonio Junior Spoleto_** | SE4I Project | 
+| **_Concetta Vitale_**        | SE4I Project |
+| **_Angelo Casolaro_**        | SE4I Project |
+| **_Giovanni Hauber_**        | SE4I Project |
+| **_Gennaro Iannuzzo_**       | SE4I Project |
+| **_Antonio De Trino_**       | SE4I Project |
+| **_Rosario Vallefuoco_**     | SE4I Project |
 
 # Esterni
 
 |                        | Affiliazione          | Sponsor          |
 |------------------------|-----------------------|------------------|
-| **_Pasquale De Luca_** | Università di Salerno | Livia Marcellino |
 | **_Dante D. Sànchez-Gallegos_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
 | **_Armando Barron_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
+| **_Marco Lapegna_** | Università degli Studi di Napoli Federico II, Italia | Raffaele Montella |
+| **_Umberto Scafuri_** | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italia | Giulio Giunta |
+

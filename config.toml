@@ -1,10 +1,10 @@
 baseURL = "https://rcf.uniparthenope.it/"
-languageCode = "it-it"
+languageCode = "en-en"
 title = "Research Computing Facilities"
 theme = "hugo-theme-cleanwhite"
 
-DefaultContentLanguage = "it"
-copyright = "Everything is mine"
+DefaultContentLanguage = "en"
+copyright = "Research Computing Facilities - Department of Science and Technologies - University of Naples “Parthenope”"
 
 [languages]
   [languages.en]
@@ -12,13 +12,14 @@ copyright = "Everything is mine"
     weight = 1
     title_404 = "Page not found :("
     image_404 = "img/404-bg.jpeg"
-    [[languages.en.params.addtional_menus]]
+    [languages.en.params]
+      slogan = "HPC, GPU, e Cloud Computing resources management for the CI&SS, CVPR, HPSCSmart e Neptun-IA laboratories."
+      [[languages.en.params.addtional_menus]]
         title =  "User Guide"
         href =  "/en/userguide/"
-    [[languages.en.params.addtional_menus]]
+      [[languages.en.params.addtional_menus]]
         title =  "Access"
         href =  "/en/access/"
-    [languages.en.params]
       [[languages.en.params.addtional_menus]]
         title =  "Resources"
         href =  "/en/resources/"
@@ -41,6 +42,7 @@ copyright = "Everything is mine"
     title_404 = "pagina non trovata :("
     image_404 = "img/404-bg.jpeg"
     [languages.it.params]
+      slogan = "Struttura di gestione per le risorse HPC, GPU, e Cloud Computing per laboratori CI&SS, CVPR, HPSCSmart e Neptun-IA."
       [[languages.it.params.addtional_menus]]
         title =  "Guida all'Uso"
         href =  "/it/userguide/"
@@ -71,8 +73,7 @@ home = ["HTML", "RSS"]
   SEOTitle = "Research Computing Facilities"
   description = ""
   keyword = "raffaele, montella, high performance computing, hpc, uniparthenope, università degli studi di napoli parthenope, parthenope, dipartimento di scienze e tecnologie"
-  slogan = "Struttura di gestione per le risorse HPC, GPU, e Cloud Computing trasversale ai laboratori CI&SS, CVPR, HPSCSmart e Neptun-IA del Dipartimento di Scienze e Tecnologie dell’Università degli Studi di Napoli “Parthenope”."
-
+  
   friends = false
   bookmarks = true
   enableBlogPost = false
@@ -109,6 +110,12 @@ home = ["HTML", "RSS"]
   [[params.bookmark_link]]
   title = "Neptun-IA"
   href =  "http://neptunia.uniparthenope.it"
+  [[params.bookmark_link]]
+  title = "HPC: Key Technologies and Tools"
+  href = "https://www.consorzio-cini.it/index.php/it/laboratori-nazionali/hpc-key-technologies-and-tools"
+  [[params.bookmark_link]]
+  title = "Consorzio Interuniversitario Nazionale per l'Informatica"
+  href = "https://www.consorzio-cini.it"
 
 [markup]
   [markup.tableOfContents]
