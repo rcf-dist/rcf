@@ -34,13 +34,13 @@ showtoc: false
 
 # Dottorandi
 
-|                                 | |                                      |-|                                                                                     |-| Tutor                                                |
-|---------------------------------|-|--------------------------------------|-|-------------------------------------------------------------------------------------|-|------------------------------------------------------|
-| **_Ciro Giuseppe De Vita_**     | | cirogiuseppe.devita@uniparthenope.it | | Dottorato Fenomeni e Rischi Ambientali 37° Ciclo                                    | | Raffaele Montella, Angelo Ciaramella                 |
-| **_Pasquale De Luca_**          | | pasquale.deluca@uniparthenope.it     | | Dottorato 37° Ciclo                                                                 | | Giulio Giunta, Ardelio Galletti, Livia Marcellino    |         
-| **_Emanuel Di Nardo_**          | | emanuel.dinardo@uniparthenope.it     | |                                                                                     | | Angelo Ciaramella                                    |
-| **_Gennaro Mellone_**           | | gennaro.mellone@uniparthenope.it     | | Fenomeni e Rischi Ambientali 37° Ciclo                                              | | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
-| **_Vincenzo Mariano Scarrica_** | | mariano.scariica@uniparthenope.it    | | Dottorato Nazionale Intelligenza Artificiale - Ambito Agrifood e Ambiente 37° Ciclo | | Antonino Staiano, Alessio Ferone                     |
+|                                 |                                           |                                                                           | Tutor                                                |
+|---------------------------------|-------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------|
+| **_Ciro Giuseppe De Vita_**     | cirogiuseppe.devita@uniparthenope.it      | Fenomeni e Rischi Ambientali                                              | Raffaele Montella, Angelo Ciaramella                 |
+| **_Pasquale De Luca_**          | pasquale.deluca@uniparthenope.it          | Environment, Resources and Sustainable Development                        | Giulio Giunta, Ardelio Galletti, Livia Marcellino    |         
+| **_Emanuel Di Nardo_**          | emanuel.dinardo@uniparthenope.it          |                                                                           | Angelo Ciaramella                                    |
+| **_Gennaro Mellone_**           | gennaro.mellone@uniparthenope.it          | Fenomeni e Rischi Ambientali                                              | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
+| **_Vincenzo Mariano Scarrica_** | vincenzomariano.scarrica@uniparthenope.it | Dottorato Nazionale Intelligenza Artificiale - Ambito Agrifood e Ambiente | Antonino Staiano, Alessio Ferone                     |
 
 # Ricercatori a contratto
 
