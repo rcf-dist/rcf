@@ -40,7 +40,7 @@ showtoc: false
 | **_Ciro Giuseppe De Vita_**     | cirogiuseppe.devita@uniparthenope.it      | Fenomeni e Rischi Ambientali, University of Naples "Parthenope"                       | Raffaele Montella, Angelo Ciaramella                 |
 | **_Pasquale De Luca_**          | pasquale.deluca@uniparthenope.it          | Environment, Resources and Sustainable Development, University of Naples "Parthenope" | Giulio Giunta, Ardelio Galletti, Livia Marcellino    |         
 | **_Emanuel Di Nardo_**          | emanuel.dinardo@uniparthenope.it          | Deep learning for Computer Vision, University of Milan                                | Angelo Ciaramella                                    |
-| **_Gennaro Mellone_**           | gennaro.mellone@uniparthenope.it          | Fenomeni e Rischi Ambientali                                                          | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
+| **_Gennaro Mellone_**           | gennaro.mellone@uniparthenope.it          | Fenomeni e Rischi Ambientali, University of Naples "Parthenope"                       | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
 | **_Vincenzo Mariano Scarrica_** | vincenzomariano.scarrica@uniparthenope.it | Agrifood and Environment, National Ph.D. in Artificial Intelligence                   | Antonino Staiano, Alessio Ferone                     |
 
 # Contract researchers
