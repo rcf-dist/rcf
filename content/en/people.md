@@ -14,15 +14,15 @@ showtoc: false
 
 |                          |                                |                                     |
 |--------------------------|--------------------------------|-------------------------------------|
-| **_Raffaele Montella_**  | **Responsabile Scientifico**   | raffaele.montella@uniparthenope.it  |
-|                          | Co-head of the HPSCSmart Lab. |                                     |
+| **_Raffaele Montella_**  | **Principal Investigator**     | raffaele.montella@uniparthenope.it  |
+|                          | Co-head of the HPSCSmart Lab.  |                                     |
 |                          |                                |                                     |
-| **_Francesco Camastra_** | Head of the CVPR Lab.        | francesco.camastra@uniparthenope.it |
-| **_Angelo Ciaramella_**  | Head of the CI&SS Lab.       | angelo.ciaramella@uniparthenope.it  |
-| **_Alessio Ferone_**     | Co-head of the CVPR Lab      | alessio.ferone@uniparthenope.it     |
-| **_Giulio Giunta_**      | Co-head of the HPSCSmart Lab. | giulio.giunta@uniparthenope.it      |
-| **_Antonio Maratea_**    | Co-head of the CI&SSLab.     | antonio.maratea@uniparthenope.it    |
-| **_Antonino Staiano_**   | Head of the Neptun-IA Lab.    | antonino.staiano@uniparthenope.it   |
+| **_Francesco Camastra_** | Head of the CVPR Lab.          | francesco.camastra@uniparthenope.it |
+| **_Angelo Ciaramella_**  | Head of the CI&SS Lab.         | angelo.ciaramella@uniparthenope.it  |
+| **_Alessio Ferone_**     | Co-head of the CVPR Lab        | alessio.ferone@uniparthenope.it     |
+| **_Giulio Giunta_**      | Co-head of the HPSCSmart Lab.  | giulio.giunta@uniparthenope.it      |
+| **_Antonio Maratea_**    | Co-head of the CI&SSLab.       | antonio.maratea@uniparthenope.it    |
+| **_Antonino Staiano_**   | Head of the Neptun-IA Lab.     | antonino.staiano@uniparthenope.it   |
 
 # Associates
 
@@ -35,13 +35,13 @@ showtoc: false
 
 # Ph.D. Students
 
-|                                 |                                           |                                                                           | Tutor                                                |
-|---------------------------------|-------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------|
-| **_Ciro Giuseppe De Vita_**     | cirogiuseppe.devita@uniparthenope.it      | Fenomeni e Rischi Ambientali                                              | Raffaele Montella, Angelo Ciaramella                 |
-| **_Pasquale De Luca_**          | pasquale.deluca@uniparthenope.it          | Environment, Resources and Sustainable Development                        | Giulio Giunta, Ardelio Galletti, Livia Marcellino    |         
-| **_Emanuel Di Nardo_**          | emanuel.dinardo@uniparthenope.it          |                                                                           | Angelo Ciaramella                                    |
-| **_Gennaro Mellone_**           | gennaro.mellone@uniparthenope.it          | Fenomeni e Rischi Ambientali                                              | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
-| **_Vincenzo Mariano Scarrica_** | vincenzomariano.scarrica@uniparthenope.it | Dottorato Nazionale Intelligenza Artificiale - Ambito Agrifood e Ambiente | Antonino Staiano, Alessio Ferone                     |
+|                                 |                                           |                                                                                       | Tutor                                                |
+|---------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------|------------------------------------------------------|
+| **_Ciro Giuseppe De Vita_**     | cirogiuseppe.devita@uniparthenope.it      | Fenomeni e Rischi Ambientali, University of Naples "Parthenope"                       | Raffaele Montella, Angelo Ciaramella                 |
+| **_Pasquale De Luca_**          | pasquale.deluca@uniparthenope.it          | Environment, Resources and Sustainable Development, University of Naples "Parthenope" | Giulio Giunta, Ardelio Galletti, Livia Marcellino    |         
+| **_Emanuel Di Nardo_**          | emanuel.dinardo@uniparthenope.it          | Deep learning for Computer Vision, University of Milan                                | Angelo Ciaramella                                    |
+| **_Gennaro Mellone_**           | gennaro.mellone@uniparthenope.it          | Fenomeni e Rischi Ambientali                                                          | Pietro Aucelli, Angelo Ciaramella, Raffaele Montella |
+| **_Vincenzo Mariano Scarrica_** | vincenzomariano.scarrica@uniparthenope.it | Agrifood and Environment, National Ph.D. in Artificial Intelligence                   | Antonino Staiano, Alessio Ferone                     |
 
 # Contract researchers
 
@@ -57,10 +57,10 @@ showtoc: false
 
 # Externs
 
-|                        | Affiliation          | Sponsor          |
-|------------------------|-----------------------|------------------|
-| **_Dante D. Sànchez-Gallegos_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
-| **_Armando Barron_** | Cinvestav Tamaulipas, Mexico | Raffaele Montella |
-| **_Marco Lapegna_** | University of Naples "Federico II", Italy | Raffaele Montella |
-| **_Umberto Scafuri_** | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italy | Giulio Giunta |
-| **_Federica Izzo_** | University of Naples "Suor Orsola Benincasa", Italy | Giulio Giunta |
+|                                 | Affiliation                                                    | Sponsor           |
+|---------------------------------|----------------------------------------------------------------|-------------------|
+| **_Dante D. Sànchez-Gallegos_** | Cinvestav Tamaulipas, Mexico                                   | Raffaele Montella |
+| **_Armando Barron_**            | Cinvestav Tamaulipas, Mexico                                   | Raffaele Montella |
+| **_Marco Lapegna_**             | University of Naples "Federico II", Italy                      | Raffaele Montella |
+| **_Umberto Scafuri_**           | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italy | Giulio Giunta     |
+| **_Federica Izzo_**             | University of Naples "Suor Orsola Benincasa", Italy            | Giulio Giunta     |
