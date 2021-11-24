@@ -63,4 +63,5 @@ showtoc: false
 | **_Armando Barron_**            | Cinvestav Tamaulipas, Mexico                                   | Raffaele Montella |
 | **_Marco Lapegna_**             | University of Naples "Federico II", Italy                      | Raffaele Montella |
 | **_Umberto Scafuri_**           | Istituto per il Calcolo ad Alte prestazioni e Reti, CNR, Italy | Giulio Giunta     |
+| **_Jhony H. Giraldo_**          | La Rochelle Université, France                                 | Antonino Staiano  |
 | **_Federica Izzo_**             | University of Naples "Suor Orsola Benincasa", Italy            | Giulio Giunta     |
