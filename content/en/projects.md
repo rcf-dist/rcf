@@ -4,7 +4,7 @@ title: "Projects"
 author: "RCF"
 subtitle:    "H2020, Erasmus+, PRIN, PON, Research Contracts & local research lines."
 description: "RCF-supported projects."
-date:        2023-06-30
+date:        2023-07-31
 image:       ""
 tags:        []
 categories:  []
@@ -47,7 +47,8 @@ The data provided by the Center is available on the official web page https://me
 2010 -- .
 
 # SE4I 
-.
+
+2020 -- 2022
 
 # MytiluSE
 The project aimed to design, develop, improve, and experiment with a coupled atmosphere/marine pollutant transport and dispersion modeling system capable of providing an easy-to-use tool dedicated to operators in the planning and maintenance sector of mussel and fish farming plants already operational following a previous search convention.
