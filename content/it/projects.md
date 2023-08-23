@@ -107,8 +107,10 @@ Il progetto Interoperabilità degli strumenti di apprendimento per esercizi di p
 Lo standard di interoperabilità degli strumenti di apprendimento consente agli studenti di essere indirizzati all'ambiente di apprendimento gamificato per risolvere esercizi di programmazione con i risultati rinviati automaticamente alla piattaforma di e-learning. Anche se semplice nella descrizione, LTI è complesso e aggiungere supporto alla piattaforma software FGPE è un compito che va oltre le risorse limitate del progetto FGPE. Inoltre, mentre la quantità di esercizi gamificati da sviluppare nel progetto FGPE sembrava essere sufficiente considerando il suo ambito di applicazione originale, con l’intera formazione spostata verso l’e-learning, c’è la necessità di fornire più corsi online che coinvolgano linguaggi di programmazione in un unico formato. forma gamificata.
 
 L'unità di ricerca dell'Università di Napoli Parthenope gestisce una versione prototipo del framework sviluppato durante il progetto FGPE Plus:
-*Kit autore - https://fgpe.uniparthenope.it/authorkit/ui/
+* Kit autore - https://fgpe.uniparthenope.it/authorkit/ui/
 * Piattaforma didattica - https://fgpe.uniparthenope.it/learning-platform/
+
+L'Università di Napoli Parthenope ha organizzato l'ultimo [Multiplier Event](https://fgpeplus.usz.edu.pl/me_copenhagen-2-2/) e l'ultimo [Transactional Project Meeting](https://fgpeplus.usz.edu.pl/meeting-in-szczecin-2/.)
 
 Partner: Uniwersytet Szczeciński (Polonia), INESC TEC (Portogallo), INESC TEC (Portogallo), Universita Degli Studi Di Napoli Parthenope (Italia), Kaunas University of Technology (Lituania)
 
