@@ -110,6 +110,8 @@ The University of Napoli Parthenope research unit runs a prototype version of th
 * Author Kit - https://fgpe.uniparthenope.it/authorkit/ui/
 * Learning Platform - https://fgpe.uniparthenope.it/learning-platform/
 
+The University of Naples Parthenope hosted the final [Multiplier Event](https://fgpeplus.usz.edu.pl/me_copenhagen-2-2/) and the last [Transactional Project Meeting](https://fgpeplus.usz.edu.pl/meeting-in-szczecin-2/.)
+
 Partners: Uniwersytet Szczeciński (Poland), INESC TEC (Portugal), INESC TEC (Portugal), Universita Degli Studi Di Napoli Parthenope (Italy), Kaunas University of Technology (Lithuania)
 
 Realization period: from 01/06/2021 to 31/05/2023
