@@ -110,7 +110,8 @@ L'unità di ricerca dell'Università di Napoli Parthenope gestisce una versione 
 * Kit autore - https://fgpe.uniparthenope.it/authorkit/ui/
 * Piattaforma didattica - https://fgpe.uniparthenope.it/learning-platform/
 
-L'Università di Napoli Parthenope ha organizzato l'ultimo [Multiplier Event](https://fgpeplus.usz.edu.pl/me_copenhagen-2-2/) e l'ultimo [Transactional Project Meeting](https://fgpeplus.usz.edu.pl/meeting-in-szczecin-2/.)
+L'Università di Napoli Parthenope ha organizzato l'ultimo [Multiplier Event](https://fgpeplus.usz.edu.pl/me_copenhagen-2-2/) e l'ultimo [Transactional Project Meeting](https://fgpeplus.usz.edu.pl/meeting-in-szczecin-2/.). La notizia relativamente all'evento è stata pubblicata sul portale web di Ateneo [News](https://www.uniparthenope.it/Portale-Ateneo/articolo/Gamification_in_Programming_Educce245456a21c46cf90c8dbee81ae3ca4).
+
 
 Partner: Uniwersytet Szczeciński (Polonia), INESC TEC (Portogallo), INESC TEC (Portogallo), Universita Degli Studi Di Napoli Parthenope (Italia), Kaunas University of Technology (Lituania)
 
