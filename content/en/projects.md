@@ -120,7 +120,7 @@ Programme: Erasmus+
 Key Action: Cooperation for innovation and the exchange of good practices
 Action Type: Strategic Partnerships for higher education
 
-Local PI: Prof. Raffaele Montella ([UNP](https://www.uniparthenope.it/Portale-Ateneo/organigramma/1204) [Personal](https://www.raffaelemontella.it) [Scholar](https://scholar.google.com/citations?user=JNscMYkAAAAJ&hl=en) [Scopus](https://www.scopus.com/authid/detail.uri?authorId=9235980600)) 
+Local PI: Prof. Raffaele Montella ([UNP](https://www.uniparthenope.it/Portale-Ateneo/organigramma/1204) [Personal](https://www.raffaelemontella.it) [Scholar](https://scholar.google.com/citations?user=JNscMYkAAAAJ&hl=en) [Scopus](https://www.scopus.com/authid/detail.uri?authorId=9235980600)). The news about the event has been posted on the University web portal [News](https://www.uniparthenope.it/Portale-Ateneo/articolo/Gamification_in_Programming_Educce245456a21c46cf90c8dbee81ae3ca4).
 
 2021 -- 2023
 
